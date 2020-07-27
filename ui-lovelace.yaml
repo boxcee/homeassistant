@@ -7,6 +7,9 @@ views:
       - cards:
           - entity: weather.bleckmannweg
             type: weather-forecast
+          - entity: sensor.here_travel_time
+            type: entity
+            unit: 'minutes'
         type: horizontal-stack
       - cards:
           - entity: sensor.time_home_moritz
