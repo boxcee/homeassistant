@@ -1,3 +1,6 @@
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
 
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
