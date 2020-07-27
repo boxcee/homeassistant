@@ -1,9 +1,9 @@
 ---
 - name: Moritz
-  id: 3053e2614ebc4de2a867b94e71a6f284
+  id: moritz
   device_trackers:
     - device_tracker.eml_l29
 - name: Julia
-  id: 84e8d25f57ae43efa9413d2843be3231
+  id: julia
   device_trackers:
     - device_tracker.julias_iphone
