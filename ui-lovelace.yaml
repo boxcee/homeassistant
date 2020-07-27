@@ -15,5 +15,6 @@ views:
               green: 95
               red: 0
               yellow: 80
+        type: horizontal-stack
     title: Home
     path: home
