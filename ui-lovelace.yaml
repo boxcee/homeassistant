@@ -4,8 +4,10 @@ views:
       - entity: person.moritz
       - entity: person.julia
     cards:
-      - entity: weather.bleckmannweg
-        type: weather-forecast
+      - cards:
+          - entity: weather.bleckmannweg
+            type: weather-forecast
+        type: horizontal-stack
       - cards:
           - entity: sensor.time_home_julia
             max: 100
