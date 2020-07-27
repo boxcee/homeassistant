@@ -3,3 +3,4 @@
   latitude: !secret latitude_work
   longitude: !secret longitude_work
   icon: mdi:briefcase
+  radius: 150
