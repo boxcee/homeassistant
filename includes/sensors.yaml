@@ -22,27 +22,3 @@
   origin_entity_id: zone.home
   destination_entity_id: zone.work
   mode: publicTransportTimeTable
-
-- platform: template
-  sensors:
-    moritz_travel_home:
-      value_template: >-
-        {% if is_state('person.moritz', 'home') %}
-          0
-        {% else %}
-          {{ state('sensor.here_travel_time') }}
-        {% endif %}
-
-- platform: here_travel_time
-  name: moritz_traveltime
-  api_key: !secret here_travel_api_key
-  origin_entity_id: person.moritz
-  destination_entity_id: zone.home
-  mode: publicTransportTimeTable
-
-- platform: here_travel_time
-  name: julia_traveltime
-  api_key: !secret here_travel_api_key
-  origin_entity_id: person.julia
-  destination_entity_id: zone.home
-  mode: publicTransportTimeTable
