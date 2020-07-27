@@ -1,0 +1,55 @@
+2020-07-27 14:03:46 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-07-27 14:15:36 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-07-27 14:15:36 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-07-27 14:28:02 WARNING (MainThread) [aiohttp.websocket] websocket connection is closing.
+2020-07-27 14:30:50 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-07-27 14:30:50 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-07-27 14:32:07 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-07-27 14:50:52 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-07-27 14:50:55 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2020-07-27 14:50:55 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
