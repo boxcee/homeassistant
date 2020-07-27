@@ -2,3 +2,4 @@
 /.storage/
 .HA_VERSION
 /home-assistant.log/
+/.idea/
