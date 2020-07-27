@@ -9,7 +9,7 @@ views:
             type: weather-forecast
         type: horizontal-stack
       - cards:
-          - entity: sensor.time_home_julia
+          - entity: sensor.time_home_moritz
             max: 100
             min: 0
             type: gauge
@@ -17,7 +17,7 @@ views:
               green: 95
               red: 0
               yellow: 80
-          - entity: sensor.time_home_moritz
+          - entity: sensor.time_home_julia
             max: 100
             min: 0
             type: gauge
