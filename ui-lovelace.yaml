@@ -5,5 +5,5 @@ views:
       - entity: person.julia
     cards:
       - entity: weather.bleckmannweg
-        name: Wetter
-        type: custom:simple-weather-card
+        type: weather-forecast
+    title: Home
