@@ -1,0 +1,15 @@
+latitude: !secret latitude_home
+longitude: !secret longitude_home
+internal_url: https://homeassistant.local:8123
+external_url: !secret external_url
+elevation: 0
+unit_system: metric
+time_zone: Europe/Berlin
+name: Home
+whitelist_external_dirs:
+  - /config/
+customize:
+  person.moritz:
+    entity_picture: !secret profile_photo_moritz
+  person.julia:
+    entity_picture: !secret profile_photo_julia
