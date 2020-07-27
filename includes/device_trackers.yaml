@@ -1,0 +1,5 @@
+---
+- platform: fritz
+  host: fritz.box
+  username: !secret fritz_username
+  password: !secret fritz_password

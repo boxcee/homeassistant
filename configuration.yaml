@@ -8,6 +8,7 @@ tts:
   - platform: google_translate
 
 # Others
+device_tracker: !include includes/device_trackers.yaml
 person: !include includes/persons.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
