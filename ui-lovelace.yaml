@@ -7,8 +7,15 @@ views:
       - cards:
           - entity: weather.bleckmannweg
             type: weather-forecast
+        type: horizontal-stack
+      - cards:
           - entity: sensor.here_travel_time
             type: entity
+            name: Traveltime > Work
+          - entity: sensor.here_travel_time
+            type: entity
+            name: Travelroute > Work
+            attribute: route
         type: horizontal-stack
       - cards:
           - entity: sensor.time_home_moritz
