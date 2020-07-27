@@ -21,4 +21,4 @@
   api_key: !secret here_travel_api_key
   origin_entity_id: zone.home
   destination_entity_id: zone.work
-  mode: publicTransportTimeTable
+  mode: bicycle
