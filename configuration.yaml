@@ -7,6 +7,8 @@ http: !include includes/http.yaml
 tts:
   - platform: google_translate
 
+# Others
+person: !include includes/persons.yaml
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml

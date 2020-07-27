@@ -1,3 +1,4 @@
+---
 latitude: !secret latitude_home
 longitude: !secret longitude_home
 internal_url: https://homeassistant.local:8123

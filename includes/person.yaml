@@ -1,0 +1,9 @@
+---
+- name: Moritz
+  id: moritz
+  device_trackers:
+    - device_tracker.eml_l29
+- name: Julia
+  id: julia
+  device_trackers:
+    - device_tracker.julias_iphone
