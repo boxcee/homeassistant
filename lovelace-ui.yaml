@@ -1,9 +1,0 @@
-title: Home
-views:
-  - badges:
-      - entity: person.moritz
-      - entity: person.julia
-    cards:
-      - entity: weather.bleckmannweg
-        name: Wetter
-        type: custom:simple-weather-card
