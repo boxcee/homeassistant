@@ -15,6 +15,14 @@ views:
               green: 95
               red: 0
               yellow: 80
+          - entity: sensor.time_home_moritz
+            max: 100
+            min: 0
+            type: gauge
+            severity:
+              green: 95
+              red: 0
+              yellow: 80
         type: horizontal-stack
     title: Home
     path: home
