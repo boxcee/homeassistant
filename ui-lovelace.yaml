@@ -16,7 +16,7 @@ views:
             type: entity
             name: Travelroute > Work
             attribute: route
-        type: horizontal-stack
+        type: vertical-stack
       - cards:
           - entity: sensor.time_home_moritz
             max: 100
