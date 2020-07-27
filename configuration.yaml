@@ -12,6 +12,7 @@ tts:
   - platform: google_translate
 
 # Others
+sensor: !include includes/sensors.yaml
 zone: !include includes/zones.yaml
 device_tracker: !include includes/device_trackers.yaml
 person: !include includes/persons.yaml
