@@ -7,3 +7,4 @@ views:
       - entity: weather.bleckmannweg
         type: weather-forecast
     title: Home
+    path: home
