@@ -1,6 +1,6 @@
 ---
 - platform: history_stats
-  name: Quarantine meter Moritz
+  name: Time @ Home Moritz
   entity_id: person.moritz
   state: "home"
   type: ratio
@@ -9,7 +9,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Quarantine meter Julia
+  name: Time @ Home Julia
   entity_id: person.julia
   state: "home"
   type: ratio
