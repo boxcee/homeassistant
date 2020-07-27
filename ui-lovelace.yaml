@@ -12,7 +12,7 @@ views:
           - entity: sensor.here_travel_time
             type: entity
             name: Traveltime > Work
-          - content: "state_attr('sensor.here_travel_time', 'route')"
+          - content: "{{ state_attr('sensor.here_travel_time', 'route') }}"
             type: markdown
         type: vertical-stack
       - cards:
