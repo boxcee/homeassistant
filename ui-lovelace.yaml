@@ -5,6 +5,12 @@ views:
       - entity: person.julia
     cards:
       - cards:
+          - entity: sensor.shelly_shplg_s_b864e1_current_consumption
+            type: history-graph
+            title: Current Consumption
+            refresh_interval: 300
+          type: vertical-stack
+      - cards:
           - entity: weather.bleckmannweg
             type: weather-forecast
         type: horizontal-stack
