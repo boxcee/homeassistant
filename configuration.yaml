@@ -11,6 +11,9 @@ lovelace:
 tts:
   - platform: google_translate
 
+# HACS
+shelly: !include includes/shelly.yaml
+
 # Others
 sensor: !include includes/sensors.yaml
 zone: !include includes/zones.yaml
