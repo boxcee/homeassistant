@@ -9,7 +9,7 @@ views:
             type: history-graph
             title: Current Consumption
             refresh_interval: 300
-          type: vertical-stack
+        type: vertical-stack
       - cards:
           - entity: weather.bleckmannweg
             type: weather-forecast
