@@ -18,14 +18,14 @@
   end: "{{ now() }}"
 
 - platform: here_travel_time
-  name: julia_work_travel_time
+  name: Julia Work Travel Time
   api_key: !secret here_travel_api_key
   origin_entity_id: person.julia
   destination_entity_id: zone.work_julia
   mode: bicycle
 
 - platform: here_travel_time
-  name: moritz_work_travel_time
+  name: Moritz Work Travel Time
   api_key: !secret here_travel_api_key
   origin_entity_id: person.moritz
   destination_entity_id: zone.work_moritz

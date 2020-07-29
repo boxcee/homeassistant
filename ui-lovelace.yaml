@@ -19,6 +19,7 @@ views:
         entities:
           - sensor.moritz_work_travel_time
           - sensor.julia_work_travel_time
+        columns: ['name', 'duration', 'distance']
       - cards:
           - entity: sensor.time_home_moritz
             max: 100
