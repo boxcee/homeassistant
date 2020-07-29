@@ -1,0 +1,27 @@
+---
+- platform: history_stats
+  name: Hallway Light Bathroom
+  entity_id: light.flur_deckenlicht_badezimmer
+  state: "on"
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Hallway Light Door
+  entity_id: light.flur_deckenlicht_eingang
+  state: "on"
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Hallway Light Office
+  entity_id: light.flur_deckenlicht_buro
+  state: "on"
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
