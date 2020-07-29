@@ -39,15 +39,31 @@ views:
               yellow: 80
         type: horizontal-stack
       - cards:
-          - entity: sensor.tv
-            name: TV
-            type: entity
-            icon: mdi:television
-          - entity: sensor.soundtouch_living_room
-            name: Soundtouch Living Room
-            type: entity
-            icon: mdi:music-clef-treble
-        type: horizontal-stack
+          - cards:
+              - entity: sensor.tv
+                name: TV
+                type: entity
+                icon: mdi:television
+              - entity: sensor.soundtouch_living_room
+                name: Soundtouch Living Room
+                type: entity
+                icon: mdi:music-clef-treble
+            type: horizontal-stack
+          - cards:
+              - entity: sensor.hallway_ceiling_light_bathroom
+                name: Hallway Ceiling Light Bathroom
+                type: entity
+                icon: mdi:lightbulb
+              - entity: sensor.hallway_ceiling_light_door
+                name: Hallway Ceiling Light Door
+                type: entity
+                icon: mdi:lightbulb
+              - entity: sensor.hallway_ceiling_light_office
+                name: Hallway Ceiling Light Office
+                type: entity
+                icon: mdi:lightbulb
+            type: horizontal-stack
+        type: vertical-stack
     title: Home
     path: home
 resources:
