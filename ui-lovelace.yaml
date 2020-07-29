@@ -16,14 +16,10 @@ views:
             type: weather-forecast
         type: horizontal-stack
       - cards:
-          - entity: sensor.moritz_work_travel_time
-            type: entity
-            name: Travel Time > Work Moritz
-          - entity: sensor.julia_work_travel_time
-            type: entity
-            name: Travel Time > Work Julia
-        type: vertical-stack
-      - cards:
+          - type: custom:travel-time-card
+            entities:
+              - sensor.moritz_work_travel_time
+              - sensor.julia_work_travel_time
           - entity: sensor.time_home_moritz
             max: 100
             min: 0
@@ -43,3 +39,8 @@ views:
         type: horizontal-stack
     title: Home
     path: home
+resources:
+  - url: /local/mini-graph-card-bundle.js?v=0.9.4
+    type: module
+  - url: /community_plugin/travel-time-card/travel-time-card.js
+    type: js
