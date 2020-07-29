@@ -8,5 +8,5 @@
 - name: Work Moritz
   latitude: !secret latitude_work_moritz
   longitude: !secret longitude_work_moritz
-  icon: mdi:briefcase
+  icon: mdi:laptop
   radius: 150
