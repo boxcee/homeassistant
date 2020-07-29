@@ -29,7 +29,7 @@
 - platform: history_stats
   name: Soundtouch Living Room
   entity_id: media_player.soundtouch_living_room
-  state: "on"
+  state: "playing"
   type: time
   duration:
     days: 14
