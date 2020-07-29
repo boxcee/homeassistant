@@ -1,6 +1,6 @@
 ---
 - platform: history_stats
-  name: Hallway Light Bathroom
+  name: Hallway Ceiling Light Bathroom
   entity_id: light.flur_deckenlicht_badezimmer
   state: "on"
   type: time
@@ -9,7 +9,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Hallway Light Door
+  name: Hallway Ceiling Light Door
   entity_id: light.flur_deckenlicht_eingang
   state: "on"
   type: time
@@ -18,8 +18,53 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Hallway Light Office
+  name: Hallway Ceiling Light Office
   entity_id: light.flur_deckenlicht_buro
+  state: "on"
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Dining Room Wall Light
+  entity_id: light.esszimmer_wandlicht
+  state: "on"
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Dining Room Ceiling Light
+  entity_id: light.esszimmer_wandlicht
+  state: "on"
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Kitchen Ceiling Light
+  entity_id: light.kuche_deckenlicht
+  state: "on"
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Bedroom Ceiling Light
+  entity_id: light.schlafzimmer_deckenlicht
+  state: "on"
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Living Room Ceiling Light
+  entity_id: light.wohnzimmer_deckenlicht
   state: "on"
   type: time
   duration:
