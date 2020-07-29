@@ -1,6 +1,6 @@
----
 !include includes/sensors/lights.yaml
 
+---
 - platform: history_stats
   name: Time @ Home Moritz
   entity_id: person.moritz
