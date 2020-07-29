@@ -38,6 +38,14 @@ views:
               red: 0
               yellow: 80
         type: horizontal-stack
+      - cards:
+          - entity: sensor.tv
+            name: TV
+            type: entity
+          - entity: sensor.soundtouch_living_room
+            name: Soundtouch Living Room
+            type: entity
+          type: horizontal-stack
     title: Home
     path: home
 resources:
