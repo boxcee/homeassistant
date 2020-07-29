@@ -17,8 +17,8 @@ views:
         type: horizontal-stack
       - type: custom:travel-time-card
         entities:
-          - sensor.moritz_work_travel_time
-          - sensor.julia_work_travel_time
+          - sensor.moritz_work
+          - sensor.julia_work
         columns: ['name', 'duration', 'distance']
       - cards:
           - entity: sensor.time_home_moritz
