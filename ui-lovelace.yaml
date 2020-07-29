@@ -42,9 +42,11 @@ views:
           - entity: sensor.tv
             name: TV
             type: entity
+            icon: mdi:television
           - entity: sensor.soundtouch_living_room
             name: Soundtouch Living Room
             type: entity
+            icon: mdi:music-clef-treble
         type: horizontal-stack
     title: Home
     path: home
