@@ -40,7 +40,7 @@ views:
     title: Home
     path: home
 resources:
-  - url: /local/mini-graph-card-bundle.js?v=0.9.4
+  - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
     type: module
-  - url: /community_plugin/travel-time-card/travel-time-card.js
-    type: js
+  - url: /hacsfiles/travel-time-card/travel-time-card.js
+    type: module
