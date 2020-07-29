@@ -15,6 +15,7 @@ tts:
 shelly: !include includes/shelly.yaml
 
 # Others
+media_player: !include includes/media_players.yaml
 webostv: !include includes/webostv.yaml
 sensor: !include includes/sensors.yaml
 zone: !include includes/zones.yaml
