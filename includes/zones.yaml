@@ -1,6 +1,12 @@
 ---
-- name: Work
-  latitude: !secret latitude_work
-  longitude: !secret longitude_work
+- name: Work Julia
+  latitude: !secret latitude_work_julia
+  longitude: !secret longitude_work_julia
+  icon: mdi:briefcase
+  radius: 150
+
+- name: Work Moritz
+  latitude: !secret latitude_work_moritz
+  longitude: !secret longitude_work_moritz
   icon: mdi:briefcase
   radius: 150

@@ -16,9 +16,12 @@ views:
             type: weather-forecast
         type: horizontal-stack
       - cards:
-          - entity: sensor.here_travel_time
+          - entity: sensor.moritz_work_travel_time
             type: entity
-            name: Traveltime > Work
+            name: Travel Time > Work Moritz
+          - entity: sensor.julia_work_travel_time
+            type: entity
+            name: Travel Time > Work Julia
         type: vertical-stack
       - cards:
           - entity: sensor.time_home_moritz
