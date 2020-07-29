@@ -45,7 +45,7 @@ views:
           - entity: sensor.soundtouch_living_room
             name: Soundtouch Living Room
             type: entity
-          type: horizontal-stack
+        type: horizontal-stack
     title: Home
     path: home
 resources:
