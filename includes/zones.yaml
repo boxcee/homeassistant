@@ -10,3 +10,9 @@
   longitude: !secret longitude_work_moritz
   icon: mdi:laptop
   radius: 150
+
+- name: Home Julia
+  latitude: !secret latitude_home_julia
+  longitude: !secret longitude_home_julia
+  icon: mdi:fireplace
+  radius: 150
