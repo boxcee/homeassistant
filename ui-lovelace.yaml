@@ -4,12 +4,12 @@ views:
       - cards:
           - cards:
               - type: button
-                entity: light.esszimmer_wandlicht
+                entity: light.flur
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.esszimmer_wandlicht
+                    entity_id: light.flur
               - type: button
                 entity: light.flur_deckenlicht_badezimmer
                 tap-action:
@@ -33,6 +33,13 @@ views:
                     entity_id: light.flur_deckenlicht_buro
             type: horizontal-stack
           - cards:
+              - type: button
+                entity: light.esszimmer_wandlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.esszimmer_wandlicht
               - type: button
                 entity: light.kuche_deckenlicht
                 tap-action:
