@@ -11,12 +11,26 @@ views:
                   service_data:
                     entity_id: light.esszimmer_wandlicht
               - type: button
-                entity: light.esszimmer_deckenlicht
+                entity: light.flur_deckenlicht_badezimmer
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.esszimmer_deckenlicht
+                    entity_id: light.flur_deckenlicht_badezimmer
+              - type: button
+                entity: light.flur_deckenlicht_eingang
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.flur_deckenlicht_eingang
+              - type: button
+                entity: light.flur_deckenlicht_buro
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.flur_deckenlicht_buro
             type: horizontal-stack
         type: vertical-stack
     title: Lights
