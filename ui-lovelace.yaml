@@ -32,6 +32,29 @@ views:
                   service_data:
                     entity_id: light.flur_deckenlicht_buro
             type: horizontal-stack
+          - cards:
+              - type: button
+                entity: light.kuche_deckenlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.kuche_deckenlicht
+              - type: button
+                entity: light.schlafzimmer_deckenlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.schlafzimmer_deckenlicht
+              - type: button
+                entity: light.wohnzimmer_deckenlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.wohnzimmer_deckenlicht
+            type: horizontal-stack
         type: vertical-stack
     title: Lights
     path: lights
