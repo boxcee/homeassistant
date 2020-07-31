@@ -1,18 +1,30 @@
 title: Home
 views:
+  - cards:
+      - cards:
+          - cards:
+              - type: button
+                entity: light.esszimmer_wandlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.esszimmer_wandlicht
+              - type: button
+                  entity: light.esszimmer_deckenlicht
+                  tap-action:
+                    action: call-service
+                    service: light.turn_on
+                    service_data:
+                      entity_id: light.esszimmer_deckenlicht
+            type: horizontal-stack
+        type: vertical-stack
+    title: Lights
+    path: lights
   - badges:
       - entity: person.moritz
       - entity: person.julia
     cards:
-      - cards:
-          - type: button
-            entity: light.esszimmer_wandlicht
-            tap-action:
-              action: call-service
-              service: light.turn_on
-              service_data:
-                entity_id: light.esszimmer_wandlicht
-        type: vertical-stack
       - cards:
           - entities:
               - sensor.shelly_shplg_s_b864e1_current_consumption
