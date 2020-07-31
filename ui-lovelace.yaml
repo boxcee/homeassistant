@@ -1,70 +1,5 @@
 title: Home
 views:
-  - cards:
-      - cards:
-          - cards:
-              - type: button
-                entity: light.flur
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.flur
-              - type: button
-                entity: light.flur_deckenlicht_badezimmer
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.flur_deckenlicht_badezimmer
-              - type: button
-                entity: light.flur_deckenlicht_eingang
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.flur_deckenlicht_eingang
-              - type: button
-                entity: light.flur_deckenlicht_buro
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.flur_deckenlicht_buro
-            type: horizontal-stack
-          - cards:
-              - type: button
-                entity: light.esszimmer_wandlicht
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.esszimmer_wandlicht
-              - type: button
-                entity: light.kuche_deckenlicht
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.kuche_deckenlicht
-              - type: button
-                entity: light.schlafzimmer_deckenlicht
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.schlafzimmer_deckenlicht
-              - type: button
-                entity: light.wohnzimmer_deckenlicht
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.wohnzimmer_deckenlicht
-            type: horizontal-stack
-        type: vertical-stack
-    title: Lights
-    path: lights
   - badges:
       - entity: person.moritz
       - entity: person.julia
@@ -131,6 +66,71 @@ views:
         type: vertical-stack
     title: Home
     path: home
+  - cards:
+      - cards:
+          - cards:
+              - type: button
+                entity: light.flur
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.flur
+              - type: button
+                entity: light.flur_deckenlicht_badezimmer
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.flur_deckenlicht_badezimmer
+              - type: button
+                entity: light.flur_deckenlicht_eingang
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.flur_deckenlicht_eingang
+              - type: button
+                entity: light.flur_deckenlicht_buro
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.flur_deckenlicht_buro
+            type: horizontal-stack
+          - cards:
+              - type: button
+                entity: light.esszimmer_wandlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.esszimmer_wandlicht
+              - type: button
+                entity: light.kuche_deckenlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.kuche_deckenlicht
+              - type: button
+                entity: light.schlafzimmer_deckenlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.schlafzimmer_deckenlicht
+              - type: button
+                entity: light.wohnzimmer_deckenlicht
+                tap-action:
+                  action: call-service
+                  service: light.turn_on
+                  service_data:
+                    entity_id: light.wohnzimmer_deckenlicht
+            type: horizontal-stack
+        type: vertical-stack
+    title: Lights
+    path: lights
 resources:
   - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
     type: module
