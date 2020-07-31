@@ -5,6 +5,15 @@ views:
       - entity: person.julia
     cards:
       - cards:
+          - type: button
+            entity: light.esszimmer_wandlicht
+            tap-action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.esszimmer_wandlicht
+        type: vertical-stack
+      - cards:
           - entities:
               - sensor.shelly_shplg_s_b864e1_current_consumption
             type: custom:mini-graph-card
