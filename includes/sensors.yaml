@@ -41,6 +41,7 @@
   origin_entity_id: person.julia
   destination_entity_id: zone.work_julia
   mode: bicycle
+  scan_interval: 1800
 
 - platform: here_travel_time
   name: Moritz Work
@@ -48,6 +49,7 @@
   origin_entity_id: person.moritz
   destination_entity_id: zone.work_moritz
   mode: bicycle
+  scan_interval: 1800
 
 - platform: fitbit
   clock_format: 24H
