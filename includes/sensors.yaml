@@ -162,5 +162,5 @@
   end: "{{ now() }}"
 
 - platform: rest
-  resource_template: 'https://revgeocode.search.hereapi.com/v1/revgeocode?at={{ state_attr("person.moritz", "latitude") }}%2C{{ state_attr("person.moritz", "longitude") }}&lang=en-GB&apiKey='!secret here_travel_api_key
+  resource_template: 'https://revgeocode.search.hereapi.com/v1/revgeocode?at={{ state_attr("person.moritz", "latitude") }}%2C{{ state_attr("person.moritz", "longitude") }}&lang=en-GB&apiKey=!secret here_travel_api_key'
   value_template: '{{ value_json["items"][0]["address"]["district"] }}'
