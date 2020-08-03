@@ -32,3 +32,4 @@ logger:
   logs:
     # homeassistant.components.rest: debug
     homeassistant.components.influxdb: debug
+    homeassistant.components.lovelace: debug
