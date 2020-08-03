@@ -1,4 +1,5 @@
-host: a0d7b954-influxdb
+# host: a0d7b954-influxdb
+host: ccf28a08-influxdb
 port: 8086
 database: homeassistant
 username: homeassistant
