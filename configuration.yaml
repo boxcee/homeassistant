@@ -1,7 +1,7 @@
 # Core Configuration
 homeassistant: !include includes/homeassistant.yaml
 default_config:
-http: !include includes/http.yaml
+# http: !include includes/http.yaml
 
 # Lovelace
 lovelace:

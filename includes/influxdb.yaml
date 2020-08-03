@@ -1,4 +1,5 @@
-host: a0d7b954-influxdb
+host: !secret external_domain
+path:
 port: 8086
 database: homeassistant
 username: homeassistant
