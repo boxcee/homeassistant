@@ -33,3 +33,4 @@ logger:
     # homeassistant.components.rest: debug
     homeassistant.components.influxdb: debug
     homeassistant.components.lovelace: debug
+    homeassistant.components.fitbit: debug
