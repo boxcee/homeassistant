@@ -128,13 +128,13 @@ views:
                   service_data:
                     entity_id: light.bedroom_ceiling_level_light_color_on_off
               - type: button
-                entity: light.wohnzimmer_deckenlicht
+                entity: light.living_room_ceiling_level_light_color_on_off
                 name: Living Room Ceiling
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.wohnzimmer_deckenlicht
+                    entity_id: light.living_room_ceiling_level_light_color_on_off
             type: horizontal-stack
         type: vertical-stack
     title: Lights
