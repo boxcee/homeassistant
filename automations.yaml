@@ -1,1 +1,30 @@
-[]
+---
+- alias: "Turn On Aquaponics - Github"
+  trigger:
+    - platform: state
+      entity_id: switch.osram_plug_01_d43cb000_on_off
+      from: "on"
+      to: "off"
+      for: "00:45:00"
+  condition:
+    - condition: state
+      state: "off"
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.osram_plug_01_d43cb000_on_off
+
+- alias: "Turn Off Aquaponics - Github"
+  trigger:
+    - platform: state
+      entity_id: switch.osram_plug_01_d43cb000_on_off
+      from: "off"
+      to: "on"
+      for: "00:02:00"
+  condition:
+    - condition: state
+      state: "on"
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.osram_plug_01_d43cb000_on_off
