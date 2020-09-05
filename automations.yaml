@@ -9,6 +9,7 @@
   condition:
     - condition: state
       state: "off"
+      entity_id: switch.osram_plug_01_d43cb000_on_off
   action:
     - service: switch.turn_on
       data:
@@ -24,6 +25,7 @@
   condition:
     - condition: state
       state: "on"
+      entity_id: switch.osram_plug_01_d43cb000_on_off
   action:
     - service: switch.turn_off
       data:
