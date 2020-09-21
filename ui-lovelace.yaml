@@ -136,6 +136,24 @@ views:
                   service_data:
                     entity_id: light.living_room_ceiling_level_light_color_on_off
             type: horizontal-stack
+          - cards:
+              - type: button
+                entity: switch.tz3000_g5xawfcq_ts0121_dc9413fe_on_off
+                name: Bedroom Julia
+                tap-action:
+                  action: call-service
+                  service: switch.turn_on
+                  service_data:
+                    entity_id: switch.tz3000_g5xawfcq_ts0121_dc9413fe_on_off
+              - type: button
+                entity: switch.tz3000_g5xawfcq_ts0121_1b9513fe_on_off
+                name: Living Room Shelf
+                tap-action:
+                  action: call-service
+                  service: switch.turn_on
+                  service_data:
+                    entity_id: switch.tz3000_g5xawfcq_ts0121_1b9513fe_on_off
+            type: horizontal-stack
         type: vertical-stack
     title: Lights
     path: lights
