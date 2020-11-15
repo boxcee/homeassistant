@@ -14,6 +14,9 @@
     - service: switch.turn_on
       data:
         entity_id: switch.osram_plug_01_d43cb000_on_off
+    - service: notify.tv
+      data:
+        message: "Pumpe Anschalten"
 
 - alias: "Turn Off Aquaponics - Github"
   trigger:
@@ -30,3 +33,6 @@
     - service: switch.turn_off
       data:
         entity_id: switch.osram_plug_01_d43cb000_on_off
+    - service: notify.tv
+      data:
+        message: "Pumpe Ausschalten"        
