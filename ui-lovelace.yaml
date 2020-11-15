@@ -160,243 +160,244 @@ views:
   - title: Zwift
     path: zwift
     cards:
-      - entities:
-          - entity: sensor.zwift_online_469164
-            name: Online
-          - entity: sensor.zwift_level_469164
-            name: Cycling Level
-          - color: darkorange
-            entity: sensor.zwift_cycle_progress_469164
-            entity_row: true
-            height: 20px
-            name: Cycle Progress
-            positions:
-              indicator: 'off'
-              name: inside
-              value: 'off'
-            style: |-
-              bar-card-currentbar, bar-card-contentbar, bar-card-backgroundbar {
-              margin-top: 10px;
-              }
-            type: 'custom:bar-card'
-          - entity: sensor.zwift_run_level_469164
-            name: Run Level
-          - color: deeppink
-            entity: sensor.zwift_run_progress_469164
-            entity_row: true
-            height: 20px
-            name: Run Progress
-            positions:
-              indicator: 'off'
-              name: inside
-              value: 'off'
-            style: |-
-              bar-card-currentbar, bar-card-contentbar, bar-card-backgroundbar {
-              margin-top: 10px;
-              }
-            type: 'custom:bar-card'
-          show_header_toggle: false
-          title: XXXXXX's Zwift Profile
-          type: entities
-            - card:
-                content: >-
-                  {% set last_act = state_attr("sensor.zwift_online_469164",
-                  'latest_activity') %} {% set t = last_act['movingTimeInMs'] %} {% set d
-                  = last_act['distanceInMeters'] %} {% set pace_in_seconds = 0 %} {% if d
-                  and t %}
-                     {% set pace_in_seconds = t/d %}
-                  {% endif %} Last session: {{
-                  states.sensor.zwift_online_469164.attributes.latest_activity.name }}
+      - cards:
+        - entities:
+            - entity: sensor.zwift_online_469164
+              name: Online
+            - entity: sensor.zwift_level_469164
+              name: Cycling Level
+            - color: darkorange
+              entity: sensor.zwift_cycle_progress_469164
+              entity_row: true
+              height: 20px
+              name: Cycle Progress
+              positions:
+                indicator: 'off'
+                name: inside
+                value: 'off'
+              style: |-
+                bar-card-currentbar, bar-card-contentbar, bar-card-backgroundbar {
+                margin-top: 10px;
+                }
+              type: 'custom:bar-card'
+            - entity: sensor.zwift_run_level_469164
+              name: Run Level
+            - color: deeppink
+              entity: sensor.zwift_run_progress_469164
+              entity_row: true
+              height: 20px
+              name: Run Progress
+              positions:
+                indicator: 'off'
+                name: inside
+                value: 'off'
+              style: |-
+                bar-card-currentbar, bar-card-contentbar, bar-card-backgroundbar {
+                margin-top: 10px;
+                }
+              type: 'custom:bar-card'
+            show_header_toggle: false
+            title: XXXXXX's Zwift Profile
+            type: entities
+              - card:
+                  content: >-
+                    {% set last_act = state_attr("sensor.zwift_online_469164",
+                    'latest_activity') %} {% set t = last_act['movingTimeInMs'] %} {% set d
+                    = last_act['distanceInMeters'] %} {% set pace_in_seconds = 0 %} {% if d
+                    and t %}
+                       {% set pace_in_seconds = t/d %}
+                    {% endif %} Last session: {{
+                    states.sensor.zwift_online_469164.attributes.latest_activity.name }}
 
-                  ![Activity Image]( {{
-                  states.sensor.zwift_online_469164.attributes.latest_activity.primaryImageUrl
-                  }} )
+                    ![Activity Image]( {{
+                    states.sensor.zwift_online_469164.attributes.latest_activity.primaryImageUrl
+                    }} )
 
-                  The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
-                  endif %} started on {{
-                  as_timestamp(states.sensor.zwift_online_469164.attributes.latest_activity.startDate)
-                  | timestamp_custom(' %d %B %Y at  %H:%M ') | replace(" 0", "") }}
+                    The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
+                    endif %} started on {{
+                    as_timestamp(states.sensor.zwift_online_469164.attributes.latest_activity.startDate)
+                    | timestamp_custom(' %d %B %Y at  %H:%M ') | replace(" 0", "") }}
 
-                  The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
-                  endif %} took {{
-                  states.sensor.zwift_online_469164.attributes.latest_activity.duration }}
-                  Minutes
+                    The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
+                    endif %} took {{
+                    states.sensor.zwift_online_469164.attributes.latest_activity.duration }}
+                    Minutes
 
-                  The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
-                  endif %} ended on {{
-                  as_timestamp(states.sensor.zwift_online_469164.attributes.latest_activity.endDate)
-                  | timestamp_custom(' %d %B %Y at  %H:%M ') | replace(" 0", "") }}
+                    The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
+                    endif %} ended on {{
+                    as_timestamp(states.sensor.zwift_online_469164.attributes.latest_activity.endDate)
+                    | timestamp_custom(' %d %B %Y at  %H:%M ') | replace(" 0", "") }}
 
 
-                  {% if last_act['sport'] == "CYCLING" -%} Ride {%- else -%} Run {%- endif
-                  %} stats:
+                    {% if last_act['sport'] == "CYCLING" -%} Ride {%- else -%} Run {%- endif
+                    %} stats:
 
-                  Distance: {{
-                  states.sensor.zwift_online_469164.attributes.latest_activity.distanceInMeters|round/1000
-                  }} Km
+                    Distance: {{
+                    states.sensor.zwift_online_469164.attributes.latest_activity.distanceInMeters|round/1000
+                    }} Km
 
-                  {% if last_act['sport'] == "CYCLING" -%} Climbing: {{
-                  states.sensor.zwift_online_469164.attributes.latest_activity.totalElevation
-                  }}m  {%- else -%} Pace:
-                  {{pace_in_seconds|round//60}}:{{pace_in_seconds|round%60}}/Km {%- endif
-                  %}
+                    {% if last_act['sport'] == "CYCLING" -%} Climbing: {{
+                    states.sensor.zwift_online_469164.attributes.latest_activity.totalElevation
+                    }}m  {%- else -%} Pace:
+                    {{pace_in_seconds|round//60}}:{{pace_in_seconds|round%60}}/Km {%- endif
+                    %}
 
-                  Power: {{
-                  states.sensor.zwift_online_469164.attributes.latest_activity.avgWatts
-                  }}W (Average)
+                    Power: {{
+                    states.sensor.zwift_online_469164.attributes.latest_activity.avgWatts
+                    }}W (Average)
 
-                  Calories: {{
-                  states.sensor.zwift_online_469164.attributes.latest_activity.calories
-                  }}
-                title: Last Zwift Session
-                type: markdown
-              conditions:
-                - entity: sensor.zwift_online_469164
-                  state: 'False'
-              type: conditional
-            - card:
-                entities:
-                  - entity: sensor.zwift_distance_469164
-                    name: Distance
-                  - entity: sensor.zwift_altitude_469164
-                    name: Altitude
-                  - entity: sensor.zwift_gradient_469164
-                    name: Gradient
-                  - entity: sensor.zwift_power_469164
-                    name: Power
-                  - entity: sensor.zwift_cadence_469164
-                    name: Cadence
-                  - entity: sensor.zwift_speed_469164
-                    name: Speed
-                  - entity: sensor.zwift_heart_rate_469164
-                    name: Heart Rate
+                    Calories: {{
+                    states.sensor.zwift_online_469164.attributes.latest_activity.calories
+                    }}
+                  title: Last Zwift Session
+                  type: markdown
+                conditions:
+                  - entity: sensor.zwift_online_469164
+                    state: 'False'
+                type: conditional
+              - card:
+                  entities:
+                    - entity: sensor.zwift_distance_469164
+                      name: Distance
+                    - entity: sensor.zwift_altitude_469164
+                      name: Altitude
+                    - entity: sensor.zwift_gradient_469164
+                      name: Gradient
+                    - entity: sensor.zwift_power_469164
+                      name: Power
+                    - entity: sensor.zwift_cadence_469164
+                      name: Cadence
+                    - entity: sensor.zwift_speed_469164
+                      name: Speed
+                    - entity: sensor.zwift_heart_rate_469164
+                      name: Heart Rate
+                  show_header_toggle: false
+                  title: Zwift Live Session
+                  type: entities
+                conditions:
+                  - entity: sensor.zwift_online_469164
+                    state: 'True'
+                type: conditional
+              - break
+              - entities:
+                  - entity: sensor.zwift_online_1075832
+                    name: Online
+                  - entity: sensor.zwift_level_1075832
+                    name: Cycling Level
+                  - color: darkorange
+                    entity: sensor.zwift_cycle_progress_1075832
+                    entity_row: true
+                    height: 20px
+                    name: Cycle Progress
+                    positions:
+                      indicator: 'off'
+                      name: inside
+                      value: 'off'
+                    style: |-
+                      bar-card-currentbar, bar-card-contentbar, bar-card-backgroundbar {
+                      margin-top: 10px;
+                      }
+                    type: 'custom:bar-card'
+                  - entity: sensor.zwift_run_level_1075832
+                    name: Run Level
+                  - color: deeppink
+                    entity: sensor.zwift_run_progress_1075832
+                    entity_row: true
+                    height: 20px
+                    name: Run Progress
+                    positions:
+                      indicator: 'off'
+                      name: inside
+                      value: 'off'
+                    style: |-
+                      bar-card-currentbar, bar-card-contentbar, bar-card-backgroundbar {
+                      margin-top: 10px;
+                      }
+                    type: 'custom:bar-card'
                 show_header_toggle: false
-                title: Zwift Live Session
+                title: YYYYYY's Zwift Profile
                 type: entities
-              conditions:
-                - entity: sensor.zwift_online_469164
-                  state: 'True'
-              type: conditional
-            - break
-            - entities:
-                - entity: sensor.zwift_online_1075832
-                  name: Online
-                - entity: sensor.zwift_level_1075832
-                  name: Cycling Level
-                - color: darkorange
-                  entity: sensor.zwift_cycle_progress_1075832
-                  entity_row: true
-                  height: 20px
-                  name: Cycle Progress
-                  positions:
-                    indicator: 'off'
-                    name: inside
-                    value: 'off'
-                  style: |-
-                    bar-card-currentbar, bar-card-contentbar, bar-card-backgroundbar {
-                    margin-top: 10px;
-                    }
-                  type: 'custom:bar-card'
-                - entity: sensor.zwift_run_level_1075832
-                  name: Run Level
-                - color: deeppink
-                  entity: sensor.zwift_run_progress_1075832
-                  entity_row: true
-                  height: 20px
-                  name: Run Progress
-                  positions:
-                    indicator: 'off'
-                    name: inside
-                    value: 'off'
-                  style: |-
-                    bar-card-currentbar, bar-card-contentbar, bar-card-backgroundbar {
-                    margin-top: 10px;
-                    }
-                  type: 'custom:bar-card'
-              show_header_toggle: false
-              title: YYYYYY's Zwift Profile
-              type: entities
-            - card:
-                content: >-
-                  {% set last_act = state_attr("sensor.zwift_online_1075832",
-                  'latest_activity') %} {% set t = last_act['movingTimeInMs'] %} {% set d
-                  = last_act['distanceInMeters'] %} {% set pace_in_seconds = 0 %} {% if d
-                  and t %}
-                     {% set pace_in_seconds = t/d %}
-                  {% endif %} Last session: {{
-                  states.sensor.zwift_online_1075832.attributes.latest_activity.name }}
+              - card:
+                  content: >-
+                    {% set last_act = state_attr("sensor.zwift_online_1075832",
+                    'latest_activity') %} {% set t = last_act['movingTimeInMs'] %} {% set d
+                    = last_act['distanceInMeters'] %} {% set pace_in_seconds = 0 %} {% if d
+                    and t %}
+                       {% set pace_in_seconds = t/d %}
+                    {% endif %} Last session: {{
+                    states.sensor.zwift_online_1075832.attributes.latest_activity.name }}
 
-                  ![Image]( {{
-                  states.sensor.zwift_online_1075832.attributes.latest_activity.primaryImageUrl
-                  }} )
+                    ![Image]( {{
+                    states.sensor.zwift_online_1075832.attributes.latest_activity.primaryImageUrl
+                    }} )
 
-                  The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
-                  endif %} started on {{
-                  as_timestamp(states.sensor.zwift_online_1075832.attributes.latest_activity.startDate)
-                  | timestamp_custom(' %d %B %Y at  %H:%M ') | replace(" 0", "") }}
+                    The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
+                    endif %} started on {{
+                    as_timestamp(states.sensor.zwift_online_1075832.attributes.latest_activity.startDate)
+                    | timestamp_custom(' %d %B %Y at  %H:%M ') | replace(" 0", "") }}
 
-                  The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
-                  endif %} took {{
-                  states.sensor.zwift_online_1075832.attributes.latest_activity.duration }}
-                  Minutes
+                    The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
+                    endif %} took {{
+                    states.sensor.zwift_online_1075832.attributes.latest_activity.duration }}
+                    Minutes
 
-                  The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
-                  endif %} ended on {{
-                  as_timestamp(states.sensor.zwift_online_1075832.attributes.latest_activity.endDate)
-                  | timestamp_custom(' %d %B %Y at  %H:%M ') | replace(" 0", "") }}
+                    The {% if last_act['sport'] == "CYCLING" -%} ride {%- else -%} run {%-
+                    endif %} ended on {{
+                    as_timestamp(states.sensor.zwift_online_1075832.attributes.latest_activity.endDate)
+                    | timestamp_custom(' %d %B %Y at  %H:%M ') | replace(" 0", "") }}
 
 
-                  {% if last_act['sport'] == "CYCLING" -%} Ride {%- else -%} Run {%- endif
-                  %} stats:
+                    {% if last_act['sport'] == "CYCLING" -%} Ride {%- else -%} Run {%- endif
+                    %} stats:
 
-                  Distance: {{
-                  states.sensor.zwift_online_1075832.attributes.latest_activity.distanceInMeters|round/1000
-                  }} Km
+                    Distance: {{
+                    states.sensor.zwift_online_1075832.attributes.latest_activity.distanceInMeters|round/1000
+                    }} Km
 
-                  {% if last_act['sport'] == "CYCLING" -%}  Climbing: {{
-                  states.sensor.zwift_online_1075832.attributes.latest_activity.totalElevation
-                  }}m  {%- else -%} Pace:
-                  {{pace_in_seconds|round//60}}:{{pace_in_seconds|round%60}}/Km {%- endif
-                  %}
+                    {% if last_act['sport'] == "CYCLING" -%}  Climbing: {{
+                    states.sensor.zwift_online_1075832.attributes.latest_activity.totalElevation
+                    }}m  {%- else -%} Pace:
+                    {{pace_in_seconds|round//60}}:{{pace_in_seconds|round%60}}/Km {%- endif
+                    %}
 
-                  Power: {{
-                  states.sensor.zwift_online_1075832.attributes.latest_activity.avgWatts
-                  }}W (Average)
+                    Power: {{
+                    states.sensor.zwift_online_1075832.attributes.latest_activity.avgWatts
+                    }}W (Average)
 
-                  Calories: {{
-                  states.sensor.zwift_online_1075832.attributes.latest_activity.calories
-                  }}
-                title: Last Zwift Session
-                type: markdown
-              conditions:
-                - entity: sensor.zwift_online_1075832
-                  state: 'False'
-              type: conditional
-            - card:
-                entities:
-                  - entity: sensor.zwift_distance_1075832
-                    name: Distance
-                  - entity: sensor.zwift_altitude_1075832
-                    name: Altitude
-                  - entity: sensor.zwift_gradient_1075832
-                    name: Gradient
-                  - entity: sensor.zwift_power_1075832
-                    name: Power
-                  - entity: sensor.zwift_cadence_1075832
-                    name: Cadence
-                  - entity: sensor.zwift_speed_1075832
-                    name: Speed
-                  - entity: sensor.zwift_heart_rate_1075832
-                    name: Heart Rate
-                show_header_toggle: false
-                title: Zwift Live Session
-                type: entities
-              conditions:
-                - entity: sensor.zwift_online_1075832
-                  state: 'True'
-              type: conditional
-    layout: vertical
-    type: 'custom:layout-card'
+                    Calories: {{
+                    states.sensor.zwift_online_1075832.attributes.latest_activity.calories
+                    }}
+                  title: Last Zwift Session
+                  type: markdown
+                conditions:
+                  - entity: sensor.zwift_online_1075832
+                    state: 'False'
+                type: conditional
+              - card:
+                  entities:
+                    - entity: sensor.zwift_distance_1075832
+                      name: Distance
+                    - entity: sensor.zwift_altitude_1075832
+                      name: Altitude
+                    - entity: sensor.zwift_gradient_1075832
+                      name: Gradient
+                    - entity: sensor.zwift_power_1075832
+                      name: Power
+                    - entity: sensor.zwift_cadence_1075832
+                      name: Cadence
+                    - entity: sensor.zwift_speed_1075832
+                      name: Speed
+                    - entity: sensor.zwift_heart_rate_1075832
+                      name: Heart Rate
+                  show_header_toggle: false
+                  title: Zwift Live Session
+                  type: entities
+                conditions:
+                  - entity: sensor.zwift_online_1075832
+                    state: 'True'
+                type: conditional
+      layout: vertical
+      type: 'custom:layout-card'
 
 resources:
   - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
