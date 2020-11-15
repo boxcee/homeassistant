@@ -184,6 +184,78 @@
 
 # Zwift
 
+- platform: history_stats
+  name: Off Last Zwift Session
+  entity_id: sensor.zwift_power_zone
+  state: 'Off'
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Active Recovery Last Zwift Session
+  entity_id: sensor.zwift_power_zone
+  state: 'Active Recovery'
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Endurance Last Zwift Session
+  entity_id: sensor.zwift_power_zone
+  state: 'Endurance'
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Tempo Last Zwift Session
+  entity_id: sensor.zwift_power_zone
+  state: 'Tempo'
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Threshold Last Zwift Session
+  entity_id: sensor.zwift_power_zone
+  state: 'Threshold'
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: VO2 Max Last Zwift Session
+  entity_id: sensor.zwift_power_zone
+  state: 'VO2 Max'
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Anaerobic Capacity Last Zwift Session
+  entity_id: sensor.zwift_power_zone
+  state: 'Anaerobic capacity'
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Neuromuscular Power Last Zwift Session
+  entity_id: sensor.zwift_power_zone
+  state: 'Neuromuscular Power'
+  type: time
+  duration:
+    days: 14
+  end: "{{ now() }}"
+
 - platform: template
   sensors:
     zwift_ftp:
