@@ -17,12 +17,12 @@
       from: "off"
       to: "on"
   action:
-    - service: switch.turn_off
+    - service: homeassistant.turn_off
       data:
-        entity_id: light.living_room
-    - service: switch.turn_off
+        entity_id: group.living_room
+    - service: homeassistant.turn_off
       data:
-        entity_id: light.kitchen
+        entity_id: group.kitchen
 
 - alias: "Turn On Aquaponics"
   trigger:
