@@ -1,4 +1,10 @@
 ---
+- platform: github
+  access_token: !secret github_access_token
+  repositories:
+    - path: 'boxcee/homeassistant'
+    - path: 'owledge-technology/suvi-backend'
+    
 - platform: history_stats
   name: Time @ Home Moritz
   entity_id: person.moritz
