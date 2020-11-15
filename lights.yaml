@@ -1,0 +1,12 @@
+---
+- platform: group
+  name: Living Room
+  entities:
+    - light.living_room_ceiling_level_light_color_on_off
+    - switch.tz3000_g5xawfcq_ts0121_1b9513fe_on_off
+
+- platform: group
+  name: Kitchen
+  entities:
+    - light.kitchen_ceiling_level_on_off
+    - light.dining_room_wall_level_on_off
