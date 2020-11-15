@@ -403,5 +403,7 @@ resources:
     type: module
   - url: /hacsfiles/travel-time-card/travel-time-card.js
     type: module
-  - url: /local/layout-card.js
+  - url: /hacsfiles/lovelace-layout-card/layout-card.js
+    type: module
+ -  url: /hacsfiles/bar-card/bar-card.js
     type: module
