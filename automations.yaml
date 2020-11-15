@@ -1,4 +1,21 @@
 ---
+- alias: "Turn Off Lights When Charging"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.moritz_is_charging
+      from: "off"
+      to: "on"
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.tz3000_g5xawfcq_ts0121_1b9513fe_on_off
+    - service: switch.turn_off
+      data:
+        entity_id: light.dining_room_wall_level_on_off
+    - service: switch.turn_off
+      data:
+        entity_id: light.living_room_ceiling_level_light_color_on_off
+
 - alias: "Turn On Aquaponics"
   trigger:
     - platform: state
