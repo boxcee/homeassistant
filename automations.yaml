@@ -21,7 +21,7 @@
       entity_id: switch.osram_plug_01_d43cb000_on_off
       from: "off"
       to: "on"
-      for: "00:02:00"
+      for: "00:02:30"
   condition:
     - condition: state
       state: "on"
