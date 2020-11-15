@@ -1,5 +1,5 @@
 ---
-- alias: "Turn On Aquaponics - Github"
+- alias: "Turn On Aquaponics"
   trigger:
     - platform: state
       entity_id: switch.osram_plug_01_d43cb000_on_off
@@ -16,9 +16,9 @@
         entity_id: switch.osram_plug_01_d43cb000_on_off
     - service: notify.notify
       data:
-        message: "Pumpe Anschalten"
+        message: "Turn On Aquaponics"
 
-- alias: "Turn Off Aquaponics - Github"
+- alias: "Turn Off Aquaponics"
   trigger:
     - platform: state
       entity_id: switch.osram_plug_01_d43cb000_on_off
@@ -35,4 +35,4 @@
         entity_id: switch.osram_plug_01_d43cb000_on_off
     - service: notify.notify
       data:
-        message: "Pumpe Ausschalten"        
+        message: "Turn Off Aquaponics"        
