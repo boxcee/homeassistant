@@ -181,3 +181,35 @@
 #    {% else %}
 #      {{ value_json['items'][0]['address']['city'] }}
 #    {% endif %}
+
+# Zwift
+
+- platform: template
+  sensors:
+    zwift_ftp:
+      friendly_name: "Zwift FTP"
+      entity_id: sensor.zwift_online_469164
+      unit_of_measurement: 'watts'
+      value_template: "{{states.sensor.zwift_online_469164.attributes.ftp}}"
+
+    zwift_power_zone:
+      friendly_name: "Zwift Power Zone"
+      entity_id: sensor.zwift_power_469164
+      value_template: >-
+        {% set ftp = states('sensor.zwift_ftp') | float %}
+        {% set power = states('sensor.zwift_power_469164') | float %}
+        {% set zone1 = ftp | float * 0.55 %}
+        {% set zone2 = ftp | float * 0.76 %}
+        {% set zone3 = ftp | float * 0.90 %}
+        {% set zone4 = ftp | float * 1.05 %}
+        {% set zone5 = ftp | float * 1.2 %}
+        {% set zone6 = ftp | float * 1.5 %}
+
+        {% if power < 1 %}Off
+        {% elif zone1 > power %}Active Recovery
+        {% elif zone2 > power %}Endurance
+        {% elif zone3 > power %}Tempo
+        {% elif zone4 > power %}Threshold
+        {% elif zone5 > power %}VO2 Max
+        {% elif zone6 > power %}Anaerobic capacity
+        {% elif zone6 < power %}Neuromuscular Power{% endif %}

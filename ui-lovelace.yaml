@@ -395,8 +395,8 @@ views:
           - entity: sensor.zwift_online_1075832
             state: 'True'
         type: conditional
-      layout: vertical
-      type: 'custom:layout-card'
+    layout: vertical
+    type: 'custom:layout-card'
 
 resources:
   - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
