@@ -1,4 +1,10 @@
 ---
+- platform: zwift
+  username: !secret moritz_zwift_username
+  password: !secret moritz_zwift_password
+  players:
+    - !secret moritz_zwift_id
+
 - platform: github
   access_token: !secret github_access_token
   repositories:
