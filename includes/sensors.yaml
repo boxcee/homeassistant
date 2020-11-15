@@ -185,7 +185,7 @@
 # Zwift
 
 - platform: history_stats
-  name: Off Last Zwift Session
+  name: Off Zwift
   entity_id: sensor.zwift_power_zone
   state: 'Off'
   type: time
@@ -194,7 +194,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Active Recovery Last Zwift Session
+  name: Active Recovery Zwift
   entity_id: sensor.zwift_power_zone
   state: 'Active Recovery'
   type: time
@@ -203,7 +203,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Endurance Last Zwift Session
+  name: Endurance Zwift
   entity_id: sensor.zwift_power_zone
   state: 'Endurance'
   type: time
@@ -221,7 +221,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Threshold Last Zwift Session
+  name: Threshold Zwift
   entity_id: sensor.zwift_power_zone
   state: 'Threshold'
   type: time
@@ -230,7 +230,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: VO2 Max Last Zwift Session
+  name: VO2 Max Zwift
   entity_id: sensor.zwift_power_zone
   state: 'VO2 Max'
   type: time
@@ -239,7 +239,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Anaerobic Capacity Last Zwift Session
+  name: Anaerobic Capacity Zwift
   entity_id: sensor.zwift_power_zone
   state: 'Anaerobic capacity'
   type: time
@@ -248,7 +248,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Neuromuscular Power Last Zwift Session
+  name: Neuromuscular Power Zwift
   entity_id: sensor.zwift_power_zone
   state: 'Neuromuscular Power'
   type: time
