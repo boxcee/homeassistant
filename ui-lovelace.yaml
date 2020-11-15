@@ -403,3 +403,5 @@ resources:
     type: module
   - url: /hacsfiles/travel-time-card/travel-time-card.js
     type: module
+  - url: /local/layout-card.js
+    type: module
