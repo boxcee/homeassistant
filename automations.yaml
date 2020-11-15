@@ -14,7 +14,7 @@
     - service: switch.turn_on
       data:
         entity_id: switch.osram_plug_01_d43cb000_on_off
-    - service: notify.tv
+    - service: notify.notify
       data:
         message: "Pumpe Anschalten"
 
@@ -33,6 +33,6 @@
     - service: switch.turn_off
       data:
         entity_id: switch.osram_plug_01_d43cb000_on_off
-    - service: notify.tv
+    - service: notify.notify
       data:
         message: "Pumpe Ausschalten"        
