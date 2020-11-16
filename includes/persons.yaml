@@ -3,11 +3,11 @@
   id: moritz
   user_id: 3053e2614ebc4de2a867b94e71a6f284
   device_trackers:
-    - device_tracker.eml_l29
     - device_tracker.huawei_p20_6d2ba7f75b3075
+    - device_tracker.eml_l29
 - name: Julia
   id: julia
   user_id: 84e8d25f57ae43efa9413d2843be3231
   device_trackers:
-    - device_tracker.julias_iphone
     - device_tracker.6c_4d_73_ce_22_96
+    - device_tracker.julias_iphone
