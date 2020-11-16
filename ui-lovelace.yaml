@@ -233,21 +233,21 @@ views:
                 %} stats:
 
                 Distance: {{
-                states.sensor.zwift_online_469164.attributes.latest_activity.distanceInMeters|round/1000
+                (states.sensor.zwift_online_469164.attributes.latest_activity.distanceInMeters / 1000) | round(2)
                 }} Km
 
                 {% if last_act['sport'] == "CYCLING" -%} Climbing: {{
-                states.sensor.zwift_online_469164.attributes.latest_activity.totalElevation
+                states.sensor.zwift_online_469164.attributes.latest_activity.totalElevation | round
                 }}m  {%- else -%} Pace:
                 {{pace_in_seconds|round//60}}:{{pace_in_seconds|round%60}}/Km {%- endif
                 %}
 
                 Power: {{
-                states.sensor.zwift_online_469164.attributes.latest_activity.avgWatts
+                states.sensor.zwift_online_469164.attributes.latest_activity.avgWatts | round
                 }}W (Average)
 
                 Calories: {{
-                states.sensor.zwift_online_469164.attributes.latest_activity.calories
+                states.sensor.zwift_online_469164.attributes.latest_activity.calories | round
                 }}
               title: Last Zwift Session
               type: markdown
@@ -353,21 +353,21 @@ views:
                 %} stats:
 
                 Distance: {{
-                states.sensor.zwift_online_1075832.attributes.latest_activity.distanceInMeters|round/1000
+                (states.sensor.zwift_online_1075832.attributes.latest_activity.distanceInMeters / 1000) | round(2)
                 }} Km
 
                 {% if last_act['sport'] == "CYCLING" -%}  Climbing: {{
-                states.sensor.zwift_online_1075832.attributes.latest_activity.totalElevation
+                states.sensor.zwift_online_1075832.attributes.latest_activity.totalElevation | round
                 }}m  {%- else -%} Pace:
                 {{pace_in_seconds|round//60}}:{{pace_in_seconds|round%60}}/Km {%- endif
                 %}
 
                 Power: {{
-                states.sensor.zwift_online_1075832.attributes.latest_activity.avgWatts
+                states.sensor.zwift_online_1075832.attributes.latest_activity.avgWatts | round
                 }}W (Average)
 
                 Calories: {{
-                states.sensor.zwift_online_1075832.attributes.latest_activity.calories
+                states.sensor.zwift_online_1075832.attributes.latest_activity.calories | round
                 }}
               title: Last Zwift Session
               type: markdown
