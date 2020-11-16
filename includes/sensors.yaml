@@ -9,7 +9,7 @@
   access_token: !secret github_access_token
   repositories:
     - path: 'boxcee/homeassistant'
-    - path: 'owledge-technology/suvi-backend'
+    - path: 'mathieudutour/github-tag-action'
 
 - platform: history_stats
   name: Time @ Home Moritz
