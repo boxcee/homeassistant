@@ -34,7 +34,7 @@
   trigger:
     - platform: state
       entity_id: switch.osram_plug_01_d43cb000_on_off
-      to: "off"
+      from: "on"
       for: "00:45:00"
   action:
     - service: switch.turn_on
@@ -48,7 +48,7 @@
   trigger:
     - platform: state
       entity_id: switch.osram_plug_01_d43cb000_on_off
-      to: "on"
+      from: "off"
       for: "00:02:30"
   action:
     - service: switch.turn_off
