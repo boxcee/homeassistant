@@ -1,4 +1,6 @@
 ---
+# Fun stuff
+
 - alias: "Julia @ Parents"
   trigger:
     - platform: zone
@@ -9,6 +11,8 @@
     - service: notify.mobile_app_julias_iphone
       data:
         message: "Welcome! Nice to see your parents, isn't it?"
+
+# Convenience
 
 - alias: "Turn Off Lights When Charging"
   trigger:
@@ -24,17 +28,14 @@
       data:
         entity_id: group.kitchen
 
+# Aquaponics
+
 - alias: "Turn On Aquaponics"
   trigger:
     - platform: state
       entity_id: switch.osram_plug_01_d43cb000_on_off
-      from: "on"
       to: "off"
       for: "00:45:00"
-  condition:
-    - condition: state
-      state: "off"
-      entity_id: switch.osram_plug_01_d43cb000_on_off
   action:
     - service: switch.turn_on
       data:
@@ -47,13 +48,8 @@
   trigger:
     - platform: state
       entity_id: switch.osram_plug_01_d43cb000_on_off
-      from: "off"
       to: "on"
       for: "00:02:30"
-  condition:
-    - condition: state
-      state: "on"
-      entity_id: switch.osram_plug_01_d43cb000_on_off
   action:
     - service: switch.turn_off
       data:
