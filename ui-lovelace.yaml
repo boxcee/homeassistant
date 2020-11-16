@@ -400,6 +400,94 @@ views:
             type: conditional
         layout: vertical
         type: 'custom:layout-card'
+      - cards:
+          - type: 'custom:bignumber-card'
+            entity: sensor.active_recovery_last_zwift_session
+            min: 0
+            max: 1
+            scale: 20px
+            show_state: true
+            title: Active Recovery
+            show_icon: false
+            severity:
+              - value: 0.01
+                style: grey
+              - value: 2
+                style: grey
+          - type: 'custom:bignumber-card'
+            entity: sensor.endurance_last_zwift_session
+            min: 0
+            max: 1
+            scale: 20px
+            show_state: true
+            title: Endurance
+            show_icon: false
+          - type: 'custom:bignumber-card'
+            scale: 20px
+            entity: sensor.tempo_last_zwift_session
+            min: 0
+            max: 1
+            show_state: true
+            title: Tempo
+            show_icon: false
+            severity:
+              - value: 0.01
+                style: 'rgb(130,212,83)'
+              - value: 2
+                style: 'rgb(130,212,83)'
+          - type: 'custom:bignumber-card'
+            entity: sensor.threshold_last_zwift_session
+            scale: 20px
+            min: 0
+            max: 1
+            show_state: true
+            title: Threshold
+            show_icon: false
+            severity:
+              - value: 0.01
+                style: yellow
+              - value: 2
+                style: yellow
+          - type: 'custom:bignumber-card'
+            entity: sensor.vo2_max_last_zwift_session
+            min: 0
+            max: 1
+            scale: 20px
+            show_state: true
+            title: Vo2 Max
+            show_icon: false
+            severity:
+              - value: 0.01
+                style: orange
+              - value: 2
+                style: orange
+          - type: 'custom:bignumber-card'
+            entity: sensor.anaerobic_capacity_last_zwift_session
+            min: 0
+            max: 1
+            show_state: true
+            title: Anaerobic Capacity
+            show_icon: false
+            scale: 20px
+            severity:
+              - value: 0.01
+                style: red
+              - value: 2
+                style: red
+          - type: 'custom:bignumber-card'
+            entity: sensor.neuromuscular_power_last_zwift_session
+            min: 0
+            max: 1
+            scale: 20px
+            show_state: true
+            title: Neuromuscular Power
+            show_icon: false
+            severity:
+              - value: 0.01
+                style: purple
+              - value: 2
+                style: purple
+        type: vertical-stack
 
 resources:
   - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
@@ -409,4 +497,6 @@ resources:
   - url: /hacsfiles/lovelace-layout-card/layout-card.js
     type: module
   - url: /hacsfiles/bar-card/bar-card.js
+    type: module
+  - url: /hacsfiles/bignumber-card/bignumber-card.js
     type: module
