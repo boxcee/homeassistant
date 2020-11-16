@@ -402,7 +402,7 @@ views:
         type: 'custom:layout-card'
       - cards:
           - type: 'custom:bignumber-card'
-            entity: sensor.active_recovery_last_zwift_session
+            entity: sensor.active_recovery_zwift
             min: 0
             max: 1
             scale: 20px
@@ -415,7 +415,7 @@ views:
               - value: 2
                 style: grey
           - type: 'custom:bignumber-card'
-            entity: sensor.endurance_last_zwift_session
+            entity: sensor.endurance_zwift
             min: 0
             max: 1
             scale: 20px
@@ -424,7 +424,7 @@ views:
             show_icon: false
           - type: 'custom:bignumber-card'
             scale: 20px
-            entity: sensor.tempo_last_zwift_session
+            entity: sensor.tempo_zwift
             min: 0
             max: 1
             show_state: true
@@ -436,7 +436,7 @@ views:
               - value: 2
                 style: 'rgb(130,212,83)'
           - type: 'custom:bignumber-card'
-            entity: sensor.threshold_last_zwift_session
+            entity: sensor.threshold_zwift
             scale: 20px
             min: 0
             max: 1
@@ -449,7 +449,7 @@ views:
               - value: 2
                 style: yellow
           - type: 'custom:bignumber-card'
-            entity: sensor.vo2_max_last_zwift_session
+            entity: sensor.vo2_max_zwift
             min: 0
             max: 1
             scale: 20px
@@ -462,7 +462,7 @@ views:
               - value: 2
                 style: orange
           - type: 'custom:bignumber-card'
-            entity: sensor.anaerobic_capacity_last_zwift_session
+            entity: sensor.anaerobic_capacity_zwift
             min: 0
             max: 1
             show_state: true
@@ -475,7 +475,7 @@ views:
               - value: 2
                 style: red
           - type: 'custom:bignumber-card'
-            entity: sensor.neuromuscular_power_last_zwift_session
+            entity: sensor.neuromuscular_power_zwift
             min: 0
             max: 1
             scale: 20px

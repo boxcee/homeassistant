@@ -212,7 +212,7 @@
   end: "{{ now() }}"
 
 - platform: history_stats
-  name: Tempo Last Zwift Session
+  name: Tempo Zwift
   entity_id: sensor.zwift_power_zone
   state: 'Tempo'
   type: time
