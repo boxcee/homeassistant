@@ -285,3 +285,14 @@
         {% elif zone5 > power %}VO2 Max
         {% elif zone6 > power %}Anaerobic capacity
         {% elif zone6 < power %}Neuromuscular Power{% endif %}
+
+# Aquaponics
+
+- platform: history_stats
+  name: Aquaponics Plug
+  entity_id: switch.osram_plug_01_d43cb000_on_off
+  state: 'on'
+  type: count
+  start: "{{ as_timestamp(strptime(state_attr('automation.turn_off_aquaponics', 'last_triggered'), '')) }}"
+  duration:
+    minutes: 50
