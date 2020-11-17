@@ -289,10 +289,10 @@
 # Aquaponics
 
 - platform: history_stats
-  name: Aquaponics Plug Since Last Trigger
+  name: Aquaponics Plug Count
   entity_id: switch.osram_plug_01_d43cb000_on_off
   state: 'on'
   type: count
-  start: "{{ as_timestamp(strptime(state_attr('automation.turn_off_aquaponics', 'last_triggered'), '')) }}"
   duration:
-    minutes: 50
+    hours: 1
+  end: "{{ now() }}"

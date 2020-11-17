@@ -1,7 +1,7 @@
 aquaponics:
   name: Restart Aquaponics Plug
   done_message: Aquaponics Plug Restarted
-  entity_id: sensor.aquaponics_plug_since_last_trigger
+  entity_id: sensor.aquaponics_plug_count
   state: '0'
   repeat:
     - 10
