@@ -289,7 +289,7 @@
 # Aquaponics
 
 - platform: history_stats
-  name: Aquaponics Plug
+  name: Aquaponics Plug Since Last Trigger
   entity_id: switch.osram_plug_01_d43cb000_on_off
   state: 'on'
   type: count
