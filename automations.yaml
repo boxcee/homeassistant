@@ -30,6 +30,16 @@
 
 # Aquaponics
 
+- alias: "Plug Count"
+  trigger:
+    - platform: state
+      entity_id: sensor.aquaponics_plug_count
+      to: "0"
+  action:
+    - service: notify.mobile_app_moritz
+      data:
+        message: "Plug Count"
+
 - alias: "Turn On Aquaponics"
   trigger:
     - platform: state
