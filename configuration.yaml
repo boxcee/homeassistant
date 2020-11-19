@@ -20,6 +20,7 @@ influxdb: !include includes/influxdb.yaml
 media_player: !include includes/media_players.yaml
 webostv: !include includes/webostv.yaml
 sensor: !include includes/sensors.yaml
+binary_sensor: !include includes/binary_sensors.yaml
 zone: !include includes/zones.yaml
 device_tracker: !include includes/device_trackers.yaml
 person: !include includes/persons.yaml

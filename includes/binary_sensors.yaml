@@ -1,0 +1,7 @@
+---
+- platform: template
+  sensors:
+    aquaponics_plug_restart:
+      friendly_name: "Aquaponics Plug Restart"
+      value_template: >-
+        {{ is_state('sensor.aquaponics_plug_count', '0') }}

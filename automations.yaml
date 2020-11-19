@@ -33,8 +33,8 @@
 - alias: "Plug Count"
   trigger:
     - platform: state
-      entity_id: sensor.aquaponics_plug_count
-      to: "0"
+      entity_id: binary_sensor.aquaponics_plug_restart
+      to: "on"
   action:
     - service: notify.mobile_app_moritz
       data:
