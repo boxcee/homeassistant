@@ -51,7 +51,7 @@
         entity_id: automation.turn_on_aquaponics
     - service: notify.mobile_app_moritz
       data:
-        message: "Plug Count"
+        message: "Restart Aquaonics"
 
 - alias: "Turn On Aquaponics"
   trigger:
