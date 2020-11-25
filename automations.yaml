@@ -18,8 +18,17 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.moritz_is_charging
-      from: "off"
       to: "on"
+    - platform: state
+      entity_id: sensor.julias_iphone_battery_state
+      to: "Charging"
+  condition:
+    - condition: state
+      entity_id: person.julia
+      state: home
+    - condition: state
+      entity_id: person.moritz
+      state: home
   action:
     - service: homeassistant.turn_off
       data:
@@ -30,12 +39,16 @@
 
 # Aquaponics
 
-- alias: "Plug Count"
+- alias: "Restart Aquaponics"
   trigger:
     - platform: state
       entity_id: binary_sensor.aquaponics_plug_restart
       to: "on"
   action:
+    - service: automation.reload
+    - service: automation.trigger
+      data:
+        entity_id: automation.turn_on_aquaponics
     - service: notify.mobile_app_moritz
       data:
         message: "Plug Count"
@@ -50,9 +63,6 @@
     - service: switch.turn_on
       data:
         entity_id: switch.osram_plug_01_d43cb000_on_off
-    - service: notify.mobile_app_moritz
-      data:
-        message: "Turn On Aquaponics"
 
 - alias: "Turn Off Aquaponics"
   trigger:
@@ -64,6 +74,3 @@
     - service: switch.turn_off
       data:
         entity_id: switch.osram_plug_01_d43cb000_on_off
-    - service: notify.mobile_app_moritz
-      data:
-        message: "Turn Off Aquaponics"        
