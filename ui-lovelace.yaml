@@ -140,7 +140,7 @@ views:
             type: horizontal-stack
           - cards:
               - type: button
-                entity: switch.tz3000_g5xawfcq_ts0121_dc9413fe_on_off
+                entity: switch.tz3000_g5xawfcq_ts0121_on_off
                 name: Bedroom Julia
                 tap-action:
                   action: call-service
