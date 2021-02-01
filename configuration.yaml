@@ -30,3 +30,4 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 alert: !include alerts.yaml
 spotify: !include includes/spotify.yaml
+light: !include lights.yaml
