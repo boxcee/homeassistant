@@ -72,89 +72,65 @@ views:
       - cards:
           - cards:
               - type: button
-                entity: light.ceiling_light_hallway
+                entity: light.hallway
                 name: Hallway
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.ceiling_light_hallway
-              - type: button
-                entity: light.ceiling_light_hallway_bathroom_0416b100_level_light_color_on_off
-                name: Hallway Bathroom Ceiling
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.ceiling_light_hallway_bathroom_0416b100_level_light_color_on_off
-              - type: button
-                entity: light.ceiling_light_hallway_door_a6bb000a_level_light_color_on_off
-                name: Hallway Entrance Ceiling
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.ceiling_light_hallway_door_a6bb000a_level_light_color_on_off
-              - type: button
-                entity: light.ceiling_light_hallway_office_d1a5000a_level_light_color_on_off
-                name: Hallway Office Ceiling
-                tap-action:
-                  action: call-service
-                  service: light.turn_on
-                  service_data:
-                    entity_id: light.ceiling_light_hallway_office_d1a5000a_level_light_color_on_off
+                    entity_id: light.hallway
             type: horizontal-stack
           - cards:
               - type: button
-                entity: light.unk_manufacturer_lwb010_3668a704_level_on_off
+                entity: light.dining_room_wall_light
                 name: Dining Room Wall
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.unk_manufacturer_lwb010_3668a704_level_on_off
+                    entity_id: light.dining_room_wall_light
               - type: button
-                entity: light.ceiling_light_kitchen_level_on_off
+                entity: light.kitchen_ceiling_light
                 name: Kitchen Ceiling
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.ceiling_light_kitchen_level_on_off
+                    entity_id: light.kitchen_ceiling_light
               - type: button
-                entity: light.ceiling_light_bedroom_level_light_color_on_off
+                entity: light.bedroom_ceiling_light
                 name: Bedroom Ceiling
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.ceiling_light_bedroom_level_light_color_on_off
+                    entity_id: light.bedroom_ceiling_light
               - type: button
-                entity: light.ceiling_light_dining_room_level_light_color_on_off
+                entity: light.dining_room_wall_light
                 name: Living Room Ceiling
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.ceiling_light_dining_room_level_light_color_on_off
+                    entity_id: light.dining_room_wall_light
             type: horizontal-stack
           - cards:
               - type: button
-                entity: switch.tz3000_g5xawfcq_ts0121_on_off
+                entity: switch.bedroom_bed_light
                 name: Bedroom Julia
                 tap-action:
                   action: call-service
                   service: switch.turn_on
                   service_data:
-                    entity_id: switch.tz3000_g5xawfcq_ts0121_dc9413fe_on_off
+                    entity_id: switch.bedroom_bed_light
               - type: button
-                entity: switch.tz3000_g5xawfcq_ts0121_1b9513fe_on_off
+                entity: switch.living_room_shelf_light
                 name: Living Room Shelf
                 tap-action:
                   action: call-service
                   service: switch.turn_on
                   service_data:
-                    entity_id: switch.tz3000_g5xawfcq_ts0121_1b9513fe_on_off
+                    entity_id: switch.living_room_shelf_light
             type: horizontal-stack
         type: vertical-stack
   - title: Zwift
