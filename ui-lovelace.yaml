@@ -106,13 +106,13 @@ views:
                   service_data:
                     entity_id: light.bedroom_ceiling_light
               - type: button
-                entity: light.dining_room_wall_light
+                entity: light.living_room_ceiling_light
                 name: Living Room Ceiling
                 tap-action:
                   action: call-service
                   service: light.turn_on
                   service_data:
-                    entity_id: light.dining_room_wall_light
+                    entity_id: light.living_room_ceiling_light
             type: horizontal-stack
           - cards:
               - type: button
