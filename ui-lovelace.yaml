@@ -11,7 +11,12 @@ views:
               - sensor.shelly_shplg_s_b864e1_current_consumption
             type: custom:mini-graph-card
             title: Current Consumption
-            refresh_interval: 300
+            refresh_interval: 120
+          - entities:
+              - sensor.eth_mining_profit
+            type: custom:mini-graph-card
+            title: Current Eth Profit
+            refresh_interval: 120
         type: vertical-stack
       - cards:
           - entity: weather.bleckmannweg
