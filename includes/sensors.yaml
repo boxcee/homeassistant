@@ -223,7 +223,7 @@
   value_template: '{{ value_json.data }}'
   unit_of_measurement: 'ETH'
 
-- plarm: rest
+- platform: rest
   name: Ether Wallet
   resource: https://api.etherscan.io/api
   params:
