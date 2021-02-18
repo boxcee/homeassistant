@@ -216,9 +216,29 @@
 
 # Mining
 
+# - platform: rest
+#   name: Eth
+#   resource: !secret eth_balance
+#   method: GET
+#   value_template: '{{ value_json.data }}'
+#   unit_of_measurement: 'ETH'
+
 - platform: rest
-  name: Eth
-  resource: !secret eth_address
+  name: Eth Avg Hashrate
+  resource: !secret eth_avghashratelimited
   method: GET
   value_template: '{{ value_json.data }}'
-  unit_of_measurement: 'ETH'
+  unit_of_measurement: 'Mh/s'
+
+- platform: rest
+  name: Eth Approximated Earnings
+  resource_template: https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}
+  method: GET
+  value_template: '{{ value_json.data.hour.euros }}'
+  unit_of_measurement: '€'
+
+# - platform: template
+#   sensors:
+#     eth_efficiency:
+#       friendly_name: "Eth Mining Efficiency"
+#       value_template: "{{ state_attr('sun.sun', 'elevation') }}"
