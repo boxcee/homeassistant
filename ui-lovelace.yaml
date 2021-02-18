@@ -8,9 +8,11 @@ views:
     cards:
       - cards:
           - entities:
-              - sensor.shelly_shplg_s_b864e1_current_consumption
+              - sensor.eth_nanopool_euro
+              - sensor.eth_wallet_euro
             type: custom:mini-graph-card
-            title: Consumption
+            title: Ether/€
+            icon: mdi:currency-eur
             refresh_interval: 300
           - entities:
               - sensor.ether_nanopool
@@ -35,9 +37,14 @@ views:
             refresh_interval: 300
         type: vertical-stack
       - cards:
+          - entities:
+              - sensor.shelly_shplg_s_b864e1_current_consumption
+            type: custom:mini-graph-card
+            title: Consumption
+            refresh_interval: 300
           - entity: weather.bleckmannweg
             type: weather-forecast
-        type: horizontal-stack
+        type: vertical-stack
       # - type: custom:travel-time-card
       #   entities:
       #     - sensor.moritz_work
