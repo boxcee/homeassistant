@@ -240,8 +240,8 @@
 - platform: template
   sensors:
     office_consumption_cost:
-      friendly_name: "Office Consumption Cost"
+      friendly_name: Office Consumption Cost
       value_template: "{{ (states('sensor.shelly_shplg_s_b864e1_current_consumption') | float / 1000) * 0.24 }}"
     eth_mining_profit:
       friendly_name: Eth Mining Profit
-      value_template: "{{ states('sensor.eth_approximated_earnings') | float - ((states('sensor.shelly_shplg_s_b864e1_current_consumption') | float / 1000) * 0.24) }}"
+      value_template: "{{ states('sensor.eth_approximated_earnings') | float - states('sensor.office_consumption_cost') | float }}"
