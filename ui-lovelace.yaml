@@ -24,13 +24,10 @@ views:
           - entities:
               - entity: sensor.eth_mining_profit
                 name: Profit
-                color: '#e7b416'
               - entity: sensor.office_consumption_cost
                 name: Cost
-                color: '#cc3232'
               - entity: sensor.eth_approximated_earnings
                 name: Earnings
-                color: '#2dc937'
             type: custom:mini-graph-card
             icon: mdi:currency-eur
             title: Mining
@@ -45,11 +42,6 @@ views:
           - entity: weather.bleckmannweg
             type: weather-forecast
         type: vertical-stack
-      # - type: custom:travel-time-card
-      #   entities:
-      #     - sensor.moritz_work
-      #     - sensor.julia_work
-      #   columns: ['name', 'duration', 'distance']
       - cards:
           - entity: sensor.time_home_moritz
             max: 100
