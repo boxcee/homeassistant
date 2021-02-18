@@ -11,14 +11,14 @@ views:
               - sensor.eth_nanopool_euro
               - sensor.eth_wallet_euro
             type: custom:mini-graph-card
-            title: Ether/€
+            name: Ether/€
             icon: mdi:currency-eur
             refresh_interval: 300
           - entities:
               - sensor.ether_nanopool
               - sensor.ether_wallet
             type: custom:mini-graph-card
-            title: Ether
+            name: Ether
             icon: mdi:ethereum
             refresh_interval: 300
           - entities:
@@ -30,7 +30,7 @@ views:
                 name: Earnings
             type: custom:mini-graph-card
             icon: mdi:currency-eur
-            title: Mining
+            name: Mining
             refresh_interval: 300
         type: vertical-stack
       - cards:
