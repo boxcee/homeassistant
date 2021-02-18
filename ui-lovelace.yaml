@@ -14,7 +14,7 @@ views:
             refresh_interval: 120
           - entities:
               - entity: sensor.eth_mining_profit
-                name:
+                name: Profit
                 color: '#e7b416'
               - entity: sensor.office_consumption_cost
                 name: Cost
