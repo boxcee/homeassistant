@@ -235,15 +235,15 @@
   resource_template: https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}
   method: GET
   value_template: '{{ value_json.data.hour.euros }}'
-  unit_of_measurement: '€'
+  unit_of_measurement: '€/h'
 
 - platform: template
   sensors:
     office_consumption_cost:
       friendly_name: Office Consumption Cost
-      unit_of_measurement: "€"
+      unit_of_measurement: "€/h"
       value_template: "{{ (states('sensor.shelly_shplg_s_b864e1_current_consumption') | float / 1000) * states('input_number.electricity_cost') | float }}"
     eth_mining_profit:
       friendly_name: Eth Mining Profit
-      unit_of_measurement: "€"
+      unit_of_measurement: "€/h"
       value_template: "{{ states('sensor.eth_approximated_earnings') | float - states('sensor.office_consumption_cost') | float }}"

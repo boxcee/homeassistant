@@ -9,14 +9,19 @@ views:
       - cards:
           - entities:
               - sensor.shelly_shplg_s_b864e1_current_consumption
-              - sensor.office_consumption_cost
             type: custom:mini-graph-card
-            title: Current Consumption
+            title: Consumption
             refresh_interval: 120
           - entities:
-              - sensor.eth_mining_profit
+              - entity: sensor.eth_mining_profit
+                name: Profit
+              - entity: sensor.office_consumption_cost
+                name: Cost
+              - entity: sensor.eth_approximated_earnings
+                name: Earnings
             type: custom:mini-graph-card
-            title: Current Eth Profit
+            icon: mdi:currency-eur
+            title: Mining
             refresh_interval: 120
         type: vertical-stack
       - cards:
