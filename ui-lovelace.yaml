@@ -19,6 +19,7 @@ views:
               - sensor.ether_wallet
             type: custom:mini-graph-card
             name: Ether
+            decimals: 4
             icon: mdi:ethereum
             refresh_interval: 300
           - entities:
