@@ -217,7 +217,7 @@
 # Mining
 
 - platform: rest
-  resource: https://api.nanopool.org/v1/eth/balance/!secret eth_address
+  resource: !secret eth_address
   method: GET
   value_template: '{{ value_json.data }}'
   unit_of_measurement: 'ETH'
