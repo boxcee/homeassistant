@@ -9,6 +9,7 @@ views:
       - cards:
           - entities:
               - sensor.shelly_shplg_s_b864e1_current_consumption
+              - sensor.office_consumption_cost
             type: custom:mini-graph-card
             title: Current Consumption
             refresh_interval: 120
