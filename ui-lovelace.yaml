@@ -37,7 +37,7 @@ views:
           - entities:
               - sensor.shelly_shplg_s_b864e1_current_consumption
             type: custom:mini-graph-card
-            title: Consumption
+            name: Consumption Office Desk
             refresh_interval: 300
           - entity: weather.bleckmannweg
             type: weather-forecast
