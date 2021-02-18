@@ -214,14 +214,26 @@
     hours: 1
   end: "{{ now() }}"
 
-# Mining
+# Crypto
 
-# - platform: rest
-#   name: Eth
-#   resource: !secret eth_balance
-#   method: GET
-#   value_template: '{{ value_json.data }}'
-#   unit_of_measurement: 'ETH'
+- platform: rest
+  name: Ether Nanopool
+  resource: !secret eth_balance
+  method: GET
+  value_template: '{{ value_json.data }}'
+  unit_of_measurement: 'ETH'
+
+- plarm: rest
+  name: Ether Wallet
+  resource: https://api.etherscan.io/api
+  params:
+    module: account
+    action: balance
+    address: !secret eth_address
+    tag: latest
+    apikey: !secret etherscan_apikey
+  value_template: '{{ value_json.result | float * 1000000000000000000 }}'
+  unit_of_measurement: 'ETH'
 
 - platform: rest
   name: Eth Avg Hashrate

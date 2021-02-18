@@ -11,7 +11,14 @@ views:
               - sensor.shelly_shplg_s_b864e1_current_consumption
             type: custom:mini-graph-card
             title: Consumption
-            refresh_interval: 120
+            refresh_interval: 300
+          - entities:
+              - sensor.ether_nanopool
+              - sensor.ether_wallet
+            type: custom:mini-graph-card
+            title: Ether
+            icon: mdi:ethereum
+            refresh_interval: 300
           - entities:
               - entity: sensor.eth_mining_profit
                 name: Profit
@@ -25,7 +32,7 @@ views:
             type: custom:mini-graph-card
             icon: mdi:currency-eur
             title: Mining
-            refresh_interval: 120
+            refresh_interval: 300
         type: vertical-stack
       - cards:
           - entity: weather.bleckmannweg
