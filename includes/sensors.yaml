@@ -225,14 +225,8 @@
 
 - platform: rest
   name: Ether Wallet
-  resource: https://api.etherscan.io/api
-  params:
-    module: account
-    action: balance
-    address: !secret eth_address
-    tag: latest
-    apikey: !secret etherscan_apikey
-  value_template: '{{ value_json.result | float * 1000000000000000000 }}'
+  resource: !secret etherscan
+  value_template: '{{ value_json.result | float }}'
   unit_of_measurement: 'ETH'
 
 - platform: rest
@@ -246,11 +240,10 @@
   name: Eth Approximated Earnings
   resource_template: https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}
   method: GET
-  json_attributes_path: "$.data"
+  json_attributes_path: "$.data.prices"
   json_attributes:
-    - hour
-    - prices
-  value_template: '{{ value_json.hour.euros }}'
+    - price_eur
+  value_template: '{{ value_json.data.hour.euros }}'
   unit_of_measurement: '€/h'
 
 - platform: template
@@ -266,8 +259,8 @@
     eth_nanopool_euro:
       friendly_name: Ether Nanopool Euro
       unit_of_measurement: "€"
-      value_template: "{{ state_attr('sensor.eth_approximated_earnings', 'prices').price_eur | float * states('input_number.ether_nanopool') | float }}"
+      value_template: "{{ state_attr('sensor.eth_approximated_earnings', 'price_eur') | float * states('input_number.ether_nanopool') | float }}"
     eth_wallet_euro:
       friendly_name: Ether Wallet Euro
       unit_of_measurement: "€"
-      value_template: "{{ state_attr('sensor.eth_approximated_earnings', 'prices').price_eur | float * states('input_number.ether_wallet') | float }}"
+      value_template: "{{ state_attr('sensor.eth_approximated_earnings', 'price_eur') | float * states('input_number.ether_wallet') | float }}"
