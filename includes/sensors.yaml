@@ -217,6 +217,7 @@
 # Mining
 
 - platform: rest
+  name: Eth
   resource: !secret eth_address
   method: GET
   value_template: '{{ value_json.data }}'
