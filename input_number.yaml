@@ -1,0 +1,6 @@
+electricity_cost:
+  name: Electricity cost per kWh
+  initial: 0.24
+  min: 0.2
+  max: 0.4
+  step: 0.01

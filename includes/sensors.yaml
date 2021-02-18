@@ -237,8 +237,8 @@
   value_template: '{{ value_json.data.hour.euros }}'
   unit_of_measurement: '€'
 
-# - platform: template
-#   sensors:
-#     eth_efficiency:
-#       friendly_name: "Eth Mining Efficiency"
-#       value_template: "{{ state_attr('sun.sun', 'elevation') }}"
+- platform: template
+  sensors:
+    office_consumption_cost:
+      friendly_name: "Office Consumption Cost"
+      value_template: "{{ (states('sensor.shelly_shplg_s_b864e1_current_consumption') | float / 1000) * 0.24 }}"
