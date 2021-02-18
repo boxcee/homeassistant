@@ -14,11 +14,14 @@ views:
             refresh_interval: 120
           - entities:
               - entity: sensor.eth_mining_profit
-                name: Profit
+                name:
+                color: '#e7b416'
               - entity: sensor.office_consumption_cost
                 name: Cost
+                color: '#cc3232'
               - entity: sensor.eth_approximated_earnings
                 name: Earnings
+                color: '#2dc937'
             type: custom:mini-graph-card
             icon: mdi:currency-eur
             title: Mining
