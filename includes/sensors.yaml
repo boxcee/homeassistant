@@ -207,7 +207,7 @@
 
 - platform: history_stats
   name: Aquaponics Plug Count
-  entity_id: switch.outdoor_plug_on_off
+  entity_id: switch.outdoor_plug
   state: 'on'
   type: count
   duration:
