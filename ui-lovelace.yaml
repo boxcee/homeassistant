@@ -1,5 +1,26 @@
 title: Home
 views:
+  - title: Grid
+    path: grid
+    cards:
+      - type: grid
+        cards:
+          - type: button
+            entity: light.hallway
+            name: Hallway
+            tap-action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.hallway
+          - type: button
+            entity: light.dining_room_wall_light
+            name: Dining Room Wall
+            tap-action:
+              action: call-service
+              service: light.turn_on
+              service_data:
+                entity_id: light.dining_room_wall_light
   - title: Home
     path: home
     badges:
