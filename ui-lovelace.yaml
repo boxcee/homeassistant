@@ -51,6 +51,7 @@ views:
           - type: button
             entity: switch.bedroom_bed_light
             name: Bedroom Julia
+            icon: mdi:lightbulb
             tap-action:
               action: call-service
               service: switch.turn_on
@@ -59,6 +60,7 @@ views:
           - type: button
             entity: switch.living_room_shelf_light
             name: Living Room Shelf
+            icon: mdi:lightbulb
             tap-action:
               action: call-service
               service: switch.turn_on
