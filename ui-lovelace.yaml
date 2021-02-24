@@ -64,15 +64,34 @@ views:
               service: switch.turn_on
               service_data:
                 entity_id: switch.living_room_shelf_light
-          - type: button
-            entity: media_player.tv
-            icon: mdi:television-classic
-            name: TV
-            tap-action:
-              action: call-service
-              service: media_player.toggle
-              service_data:
-                entity_id: media_player.tv
+          - type: conditional
+            conditions:
+              - entity: media_player.tv
+                state: "off"
+            card:
+              type: button
+              entity: media_player.tv
+              icon: mdi:television-classic
+              name: TV
+              tap-action:
+                action: call-service
+                service: media_player.turn_on
+                service_data:
+                  entity_id: media_player.tv
+          - type: conditional
+            conditions:
+              - entity: media_player.tv
+                state: "on"
+            card:
+              type: button
+              entity: media_player.tv
+              icon: mdi:television-classic
+              name: TV
+              tap-action:
+                action: call-service
+                service: media_player.turn_off
+                service_data:
+                  entity_id: media_player.tv
           - type: button
             entity: media_player.soundtouch_living_room
             icon: mdi:music
