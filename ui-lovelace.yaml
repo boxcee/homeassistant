@@ -85,7 +85,7 @@ views:
             card:
               type: button
               entity: media_player.tv
-              icon: mdi:television-classic
+              icon: mdi:television-classic-off
               name: TV
               tap-action:
                 action: call-service
