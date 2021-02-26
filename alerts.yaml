@@ -9,6 +9,7 @@ aquaponics:
     - 60
   notifiers:
     - mobile_app_moritz
+    - tv
 
 bicycle_room:
   name: Bicycle Room
