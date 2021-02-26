@@ -1,4 +1,15 @@
 ---
+# Lights
+- alias: Dining Room
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.kitchen_is_dark
+      to: "on"
+  action:
+    - service: homeassistant.turn_on
+      data:
+        entity_id: group.living_room
+
 # Fun stuff
 
 - alias: "Julia @ Parents"

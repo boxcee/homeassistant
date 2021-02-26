@@ -14,20 +14,11 @@ bicycle_room:
   name: Bicycle Room
   entity_id: binary_sensor.vibration_13
   state: 'on'
+  can_acknowledge: true
   repeat:
     - 10
     - 30
     - 60
   notifiers:
     - mobile_app_moritz
-
-kitchen_brightness:
-  name: Kitchen Brightness
-  entity_id: binary_sensor.kitchen_is_dark
-  state: 'on'
-  repeat:
-    - 10
-    - 30
-    - 60
-  notifiers:
-    - mobile_app_moritz
+    - tv
