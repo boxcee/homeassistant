@@ -9,8 +9,7 @@ aquaponics:
     - 60
   notifiers:
     - mobile_app_moritz
-    - notify.mobile_app_moritz
-    - notify.tv
+    - tv
     - moritz_telegram
 
 bicycle_room:
@@ -24,7 +23,7 @@ bicycle_room:
     - 30
     - 60
   notifiers:
-    - notify.mobile_app_moritz
-    - notify.tv
-    - notify.moritz_telegram
-    - notify.julia_telegram
+    - mobile_app_moritz
+    - tv
+    - moritz_telegram
+    - julia_telegram
