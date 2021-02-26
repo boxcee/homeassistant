@@ -9,8 +9,6 @@ aquaponics:
     - 60
   notifiers:
     - mobile_app_moritz
-    - tv
-    - telegram_bot.send_message
     - notify.tv
 
 bicycle_room:
