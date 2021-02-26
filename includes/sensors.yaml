@@ -177,13 +177,11 @@
   sensors:
     zwift_ftp:
       friendly_name: "Zwift FTP"
-      entity_id: sensor.zwift_online_469164
       unit_of_measurement: 'watts'
       value_template: "{{states.sensor.zwift_online_469164.attributes.ftp}}"
 
     zwift_power_zone:
       friendly_name: "Zwift Power Zone"
-      entity_id: sensor.zwift_power_469164
       value_template: >-
         {% set ftp = states('sensor.zwift_ftp') | float %}
         {% set power = states('sensor.zwift_power_469164') | float %}
