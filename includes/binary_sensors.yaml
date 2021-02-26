@@ -5,3 +5,9 @@
       friendly_name: "Aquaponics Plug Restart"
       value_template: >-
         {{ is_state('sensor.aquaponics_plug_count', '0') }}
+
+- platform: template
+  sensors:
+    kitchen_is_dark:
+      value_template: "{{ states('sensor.kitchen_motion_sensor') | float < 75 }}"
+      friendly_name: Kitchen is dark

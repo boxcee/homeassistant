@@ -8,4 +8,18 @@ aquaponics:
     - 30
     - 60
   notifiers:
-    - notify.mobile_app_moritz
+    - mobile_app_moritz
+
+bicycle_room:
+  name: Bicycle Room
+  entity_id: binary_sensor.vibration_13
+  state: 'on'
+  notifiers:
+    - mobile_app_moritz
+
+kitchen_brightness:
+  name: Kitchen Brightness
+  entity_id: binary_sensor.sensor.kitchen_is_dark
+  state: 'on'
+  notifiers:
+    - mobile_app_moritz
