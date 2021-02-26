@@ -8,9 +8,10 @@ aquaponics:
     - 30
     - 60
   notifiers:
+    - mobile_app_moritz
     - notify.mobile_app_moritz
     - notify.tv
-    - notify.moritz_telegram
+    - moritz_telegram
 
 bicycle_room:
   name: Bicycle Room
