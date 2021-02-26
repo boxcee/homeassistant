@@ -33,3 +33,8 @@ spotify: !include includes/spotify.yaml
 light: !include lights.yaml
 input_number: !include input_number.yaml
 telegram_bot: !include telegram_bot.yaml
+
+notify:
+  - platform: telegram
+    name: Moritz Telegram
+    chat_id: 1448299927
