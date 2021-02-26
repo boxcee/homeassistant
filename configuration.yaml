@@ -38,3 +38,6 @@ notify:
   - platform: telegram
     name: Moritz Telegram
     chat_id: 1448299927
+  - platform: telegram
+    name: Julia Telegram
+    chat_id: 1422341443
