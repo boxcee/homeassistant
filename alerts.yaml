@@ -10,6 +10,8 @@ aquaponics:
   notifiers:
     - mobile_app_moritz
     - tv
+    - telegram_bot.send_message
+    - notify.tv
 
 bicycle_room:
   name: Bicycle Room
@@ -24,3 +26,5 @@ bicycle_room:
   notifiers:
     - mobile_app_moritz
     - tv
+    - telegram_bot.send_message
+    - notify.tv
