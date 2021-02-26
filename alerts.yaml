@@ -15,6 +15,7 @@ bicycle_room:
   entity_id: binary_sensor.vibration_13
   state: 'on'
   can_acknowledge: true
+  message: Bicycle room door has been opened
   repeat:
     - 10
     - 30
