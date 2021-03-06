@@ -221,4 +221,4 @@
     eth_time_to_payout:
       friendly_name: Ether Time To Payout
       unit_of_measurement: "days"
-      value_template: "{{ ((states('input_number.electricity_cost') | float) - (states('sensor.ether_nanopool') | float)) / (states('sensor.earnings_eth_day') | float) }}"
+      value_template: "{{ ((states('input_number.eth_payout_limit') | float) - (states('sensor.ether_nanopool') | float)) / (states('sensor.earnings_eth_day') | float) }}"
