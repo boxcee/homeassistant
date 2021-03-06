@@ -182,6 +182,24 @@
   value_template: '{{ value_json.data }}'
   unit_of_measurement: 'Mh/s'
 
+- platform: rest
+  name: Earnings ETH Minute
+  resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
+  value_template: '{{ value_json.data.minute.coins }}'
+  unit_of_measurement: 'ETH/min'
+
+- platform: rest
+  name: Earnings ETH Hour
+  resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
+  value_template: '{{ value_json.data.hour.euros }}'
+  unit_of_measurement: '€/h'
+
+- platform: rest
+  name: ETH Price
+  resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
+  value_template: '{{ value_json.data.prices.price_eur }}'
+  unit_of_measurement: '€'
+
 - platform: template
   sensors:
     office_consumption_cost:
@@ -191,16 +209,16 @@
     eth_mining_profit:
       friendly_name: Eth Mining Profit
       unit_of_measurement: "€/h"
-      value_template: "{{ state_attr('sensor.earnings_eth_hour', 'euros') | float - states('sensor.office_consumption_cost') | float }}"
+      value_template: "{{ states('sensor.earnings_eth_hour') | float - states('sensor.office_consumption_cost') | float }}"
     eth_nanopool_euro:
       friendly_name: Ether Nanopool Euro
       unit_of_measurement: "€"
-      value_template: "{{ state_attr('sensor.eth_price', 'price_eur') | float * states('sensor.ether_nanopool') | float }}"
+      value_template: "{{ states('sensor.eth_price') | float * states('sensor.ether_nanopool') | float }}"
     eth_wallet_euro:
       friendly_name: Ether Wallet Euro
       unit_of_measurement: "€"
-      value_template: "{{ state_attr('sensor.eth_price', 'price_eur') | float * states('sensor.ether_wallet') | float }}"
+      value_template: "{{ states('sensor.eth_price') | float * states('sensor.ether_wallet') | float }}"
     eth_time_to_payout:
       friendly_name: Ether Time To Payout
       unit_of_measurement: "min"
-      value_template: "{{ state_attr('sensor.earnings_eth_hour', 'coins') | float }}"
+      value_template: "{{ states('sensor.earnings_eth_minute') | float }}"
