@@ -133,6 +133,14 @@ views:
             icon: mdi:currency-eur
             name: Mining
             refresh_interval: 300
+          - type: gauge
+            name: Days Until Payout
+            unit: 'days'
+            entity: sensor.ether_time_to_payout
+            severity:
+              green: 0
+              yellow: 3
+              red: 14
         type: vertical-stack
       - cards:
           - entities:
