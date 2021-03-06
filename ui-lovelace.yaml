@@ -137,6 +137,8 @@ views:
             name: Days Until Payout
             unit: 'days'
             entity: sensor.eth_time_to_payout
+            min: 0
+            max: 28
             severity:
               green: 0
               yellow: 3
