@@ -127,7 +127,7 @@ views:
                 name: Profit
               - entity: sensor.office_consumption_cost
                 name: Cost
-              - entity: sensor.eth_approximated_earnings
+              - entity: sensor.earnings_eth_hour
                 name: Earnings
             type: custom:mini-graph-card
             icon: mdi:currency-eur
