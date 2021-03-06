@@ -183,10 +183,10 @@
   unit_of_measurement: 'Mh/s'
 
 - platform: rest
-  name: Earnings ETH Minute
+  name: Earnings ETH Day
   resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
-  value_template: '{{ value_json.data.minute.coins }}'
-  unit_of_measurement: 'ETH/min'
+  value_template: '{{ value_json.data.day.coins }}'
+  unit_of_measurement: 'ETH/day'
 
 - platform: rest
   name: Earnings ETH Hour
@@ -220,5 +220,5 @@
       value_template: "{{ states('sensor.eth_price') | float * states('sensor.ether_wallet') | float }}"
     eth_time_to_payout:
       friendly_name: Ether Time To Payout
-      unit_of_measurement: "min"
-      value_template: "{{ states('sensor.earnings_eth_minute') | float }}"
+      unit_of_measurement: "days"
+      value_template: "{{ ((states('input_number.electricity_cost') | float) - (states('sensor.ether_nanopool') | float)) / (states('sensor.earnings_eth_day') | float) }}"
