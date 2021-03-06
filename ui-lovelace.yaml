@@ -136,7 +136,7 @@ views:
           - type: gauge
             name: Days Until Payout
             unit: 'days'
-            entity: sensor.ether_time_to_payout
+            entity: sensor.eth_time_to_payout
             severity:
               green: 0
               yellow: 3
