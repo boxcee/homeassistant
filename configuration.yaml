@@ -3,6 +3,8 @@ homeassistant: !include includes/homeassistant.yaml
 default_config:
 system_health:
 http: !include includes/http.yaml
+logger:
+  default: debug
 
 # Lovelace
 lovelace:
