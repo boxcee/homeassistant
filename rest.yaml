@@ -4,28 +4,28 @@
       value_template: '{{ value_json.data }}'
       unit_of_measurement: 'Mh/s'
 
-# - resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
-#   sensor:
-#     - name: Earnings ETH Minute
-#       json_attributes_path: '$.data.minute'
-#       json_attributes:
-#         - coins
-#         - euros
-#     - name: Earnings ETH Hour
-#       json_attributes_path: '$.data.hour'
-#       json_attributes:
-#         - coins
-#         - euros
-#     - name: Earnings ETH Day
-#       json_attributes_path: '$.data.day'
-#       json_attributes:
-#         - coins
-#         - euros
-#     - name: ETH Price
-#       unit_of_measurement: '€'
-#       json_attributes_path: '$.data.prices'
-#       json_attributes:
-#         - price_eur
+- resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
+  sensor:
+    - name: Earnings ETH Minute
+      json_attributes_path: '$.data.minute'
+      json_attributes:
+        - coins
+        - euros
+    - name: Earnings ETH Hour
+      json_attributes_path: '$.data.hour'
+      json_attributes:
+        - coins
+        - euros
+    - name: Earnings ETH Day
+      json_attributes_path: '$.data.day'
+      json_attributes:
+        - coins
+        - euros
+    - name: ETH Price
+      unit_of_measurement: '€'
+      json_attributes_path: '$.data.prices'
+      json_attributes:
+        - price_eur
 #
 # - resource: !secret eth_balance
 #   sensor:
