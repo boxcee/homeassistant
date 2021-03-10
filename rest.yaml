@@ -1,3 +1,9 @@
+- resource: !secret eth_avghashratelimited
+  sensor:
+    - name: ETH AVG Hashrate
+      value_template: '{{ value_json.data }}'
+      unit_of_measurement: 'Mh/s'
+
 - resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
   sensor:
     - name: Earnings ETH Minute
@@ -20,3 +26,15 @@
       json_attributes_path: '$.data.prices'
       json_attributes:
         - price_eur
+
+- resource: !secret eth_balance
+  sensor:
+    - name: ETH Balance Nanopool
+      value_template: '{{ value_json.data | float }}'
+      unit_of_measurement: 'ETH'
+
+- resource: !secret etherscan
+  sensor:
+    - name: ETH Balance Wallet
+      value_template: '{{ value_json.result | float / 1000000000000000000 }}'
+      unit_of_measurement: 'ETH'

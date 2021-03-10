@@ -162,63 +162,25 @@
 
 # Crypto
 
-- platform: rest
-  name: Ether Nanopool
-  resource: !secret eth_balance
-  method: GET
-  value_template: '{{ value_json.data | float }}'
-  unit_of_measurement: 'ETH'
-
-- platform: rest
-  name: Ether Wallet
-  resource: !secret etherscan
-  value_template: '{{ value_json.result | float / 1000000000000000000 }}'
-  unit_of_measurement: 'ETH'
-
-- platform: rest
-  name: Eth Avg Hashrate
-  resource: !secret eth_avghashratelimited
-  method: GET
-  value_template: '{{ value_json.data }}'
-  unit_of_measurement: 'Mh/s'
-
-- platform: rest
-  name: Earnings ETH Day
-  resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
-  value_template: '{{ value_json.data.day.coins }}'
-  unit_of_measurement: 'ETH/day'
-
-- platform: rest
-  name: Earnings ETH Hour
-  resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
-  value_template: '{{ value_json.data.hour.euros }}'
-  unit_of_measurement: '€/h'
-
-- platform: rest
-  name: ETH Price
-  resource_template: "https://api.nanopool.org/v1/eth/approximated_earnings/{{ states('sensor.eth_avg_hashrate') }}"
-  value_template: '{{ value_json.data.prices.price_eur }}'
-  unit_of_measurement: '€'
-
-- platform: template
-  sensors:
-    office_consumption_cost:
-      friendly_name: Office Consumption Cost
-      unit_of_measurement: "€/h"
-      value_template: "{{ (states('sensor.shelly_shplg_s_b864e1_current_consumption') | float / 1000) * states('input_number.electricity_cost') | float }}"
-    eth_mining_profit:
-      friendly_name: Eth Mining Profit
-      unit_of_measurement: "€/h"
-      value_template: "{{ states('sensor.earnings_eth_hour') | float - states('sensor.office_consumption_cost') | float }}"
-    eth_nanopool_euro:
-      friendly_name: Ether Nanopool Euro
-      unit_of_measurement: "€"
-      value_template: "{{ states('sensor.eth_price') | float * states('sensor.ether_nanopool') | float }}"
-    eth_wallet_euro:
-      friendly_name: Ether Wallet Euro
-      unit_of_measurement: "€"
-      value_template: "{{ states('sensor.eth_price') | float * states('sensor.ether_wallet') | float }}"
-    eth_time_to_payout:
-      friendly_name: Ether Time To Payout
-      unit_of_measurement: "days"
-      value_template: "{{ (((states('input_number.eth_payout') | float) - (states('sensor.ether_nanopool') | float)) / (states('sensor.earnings_eth_day') | float)) | round(1) }}"
+# - platform: template
+#   sensors:
+#     office_consumption_cost:
+#       friendly_name: Office Consumption Cost
+#       unit_of_measurement: "€/h"
+#       value_template: "{{ (states('sensor.shelly_shplg_s_b864e1_current_consumption') | float / 1000) * states('input_number.electricity_cost') | float }}"
+#     eth_mining_profit:
+#       friendly_name: Eth Mining Profit
+#       unit_of_measurement: "€/h"
+#       value_template: "{{ states('sensor.earnings_eth_hour') | float - states('sensor.office_consumption_cost') | float }}"
+#     eth_nanopool_euro:
+#       friendly_name: Ether Nanopool Euro
+#       unit_of_measurement: "€"
+#       value_template: "{{ states('sensor.eth_price') | float * states('sensor.ether_nanopool') | float }}"
+#     eth_wallet_euro:
+#       friendly_name: Ether Wallet Euro
+#       unit_of_measurement: "€"
+#       value_template: "{{ states('sensor.eth_price') | float * states('sensor.ether_wallet') | float }}"
+#     eth_time_to_payout:
+#       friendly_name: Ether Time To Payout
+#       unit_of_measurement: "days"
+#       value_template: "{{ (((states('input_number.eth_payout') | float) - (states('sensor.ether_nanopool') | float)) / (states('sensor.earnings_eth_day') | float)) | round(1) }}"
