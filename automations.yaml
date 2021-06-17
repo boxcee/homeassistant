@@ -61,7 +61,7 @@
       data:
         entity_id: automation.turn_on_aquaponics
     - service: notify.mobile_app_moritz
-      data:
+      data:zwif
         message: "Restart Aquaponics"
 
 - alias: "Turn On Aquaponics"
