@@ -1,6 +1,0 @@
-- platform: group
-  name: Ceiling Light Hallway
-  entities:
-    - light.ceiling_light_hallway_bathroom_0416b100_level_light_color_on_off
-    - light.ceiling_light_hallway_door_a6bb000a_level_light_color_on_off
-    - light.ceiling_light_hallway_office_d1a5000a_level_light_color_on_off
