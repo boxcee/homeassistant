@@ -146,7 +146,7 @@ views:
         type: vertical-stack
       - cards:
           - entities:
-              - sensor.shelly_shplg_s_b864e1_current_consumption
+              - sensor.shellyplug_s_b864e1_power
             type: custom:mini-graph-card
             name: Consumption Office Desk
             refresh_interval: 300
