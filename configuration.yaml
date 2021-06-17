@@ -15,7 +15,7 @@ tts:
   - platform: google_translate
 
 # HACS
-shelly: !include includes/shelly.yaml
+# shelly: !include includes/shelly.yaml
 
 # Others
 influxdb: !include includes/influxdb.yaml
